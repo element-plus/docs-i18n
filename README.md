@@ -7,6 +7,6 @@ This repository is updated automatically by the [docs deploy workflow](https://g
 ## Structure
 
 - `zh-CN/` — Simplified Chinese docs
-- `es-ES/` — Spanish docs
+- `es-ES/` — Spanish docs 
 
 > Only markdown files are kept here. Built website pages (including all locales) are published to [element-plus/vercel-publish](https://github.com/element-plus/vercel-publish).
