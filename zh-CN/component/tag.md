@@ -53,9 +53,9 @@ tag/theme
 
 :::
 
-## 圆形标签
+## 圆角标签
 
-Tag 可以向按钮组件一样变为完全圆形。
+Tag 可以像按钮组件一样变为圆角。
 
 :::demo
 
@@ -86,7 +86,7 @@ tag/checkable
 | color               | 背景色       | ^[string]                                                              | —       |
 | size                | Tag 的尺寸   | ^[enum]`'large' \| 'default' \| 'small'`                             | —       |
 | effect              | Tag 的主题   | ^[enum]`'dark' \| 'light' \| 'plain'`                                | light   |
-| round               | Tag 是否为圆形 | ^[boolean]                                                             | false   |
+| round               | Tag 是否为圆角 | ^[boolean]                                                             | false   |
 
 ### Tag Events
 

@@ -85,7 +85,7 @@ alert/icon-description
 | type        | Alert 类型。 | ^[enum]`'primary' (2.9.11) \| 'success' \| 'warning' \| 'info' \| 'error'` | info  |
 | description | 描述性文本     | ^[string]                                                                      | —     |
 | closable    | 是否可以关闭    | ^[boolean]                                                                     | true  |
-| center      | 文字是否居中    | :::                                                                            | false |
+| center      | 文字是否居中    | ^[boolean]                                                                     | false |
 | close-text  | 自定义关闭按钮文本 | ^[string]                                                                      | —     |
 | show-icon   | 是否显示类型图标  | ^[boolean]                                                                     | false |
 | effect      | 主题样式      | ^[enum]`'light' \| 'dark'`                                                    | light |
