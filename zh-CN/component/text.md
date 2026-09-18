@@ -25,7 +25,7 @@ text/sizes
 
 ## 省略
 
-:::demo 通过 ` truncated ` 属性，在文本超过视图或最大宽度设置时展示省略符。 通过 `line-clamp` 属性控制多行的样式
+:::demo 通过 ` truncated ` 属性，在文本超过视图或最大宽度设置时展示省略符。 通过 `line-clamp` 属性控制多行的样式 Starting from version ^(2.14.6), `isTruncated` is exposed to indicate whether the text is truncated. You can use it to show a tooltip only when truncation occurs.
 
 text/truncated
 
@@ -64,3 +64,9 @@ text/mixed
 | 名称      | 详情   |
 | ------- | ---- |
 | default | 默认内容 |
+
+### 暴露
+
+| 名称                    | 详情                            | Type                          |
+| --------------------- | ----------------------------- | ----------------------------- |
+| isTruncated ^(2.14.6) | whether the text is truncated | ^[object]`Ref<boolean>` |

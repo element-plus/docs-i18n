@@ -17,9 +17,9 @@ notification/basic
 
 ## Tipos de notificaciones
 
-Proporcionamos cuatro tipos: success, warning, info y error.
+We provide five types: primary, success, warning, info and error.
 
-:::demo Element Plus provides four notification types: `primary`, `success`, `warning`, `info` and `error`. Se definen por el campo `type` y se ignorarán otros valores. También se han registrado métodos para estos tipos que se pueden invocar directamente como en el ejemplo `open3` y `open4` sin pasar un campo `type`. `primary` has been added in ^(2.9.11).
+:::demo Element Plus provides five notification types: `primary`, `success`, `warning`, `info` and `error`. Se definen por el campo `type` y se ignorarán otros valores. También se han registrado métodos para estos tipos que se pueden invocar directamente como en el ejemplo `open3` y `open4` sin pasar un campo `type`. `primary` has been added in ^(2.9.11).
 
 notification/different-types
 

@@ -19,7 +19,7 @@ message/basic
 
 ## Tipos
 
-Utilizado para mostrar los comentarios de Éxito, Advertencia, Mensaje y Error de las actividades.
+Used to show the feedback of Primary, Success, Warning, Info and Error activities.
 
 :::demo Cuando necesite mas personalización, el componente Message también puede tomar un objeto como parámetro. Por ejemplo, estableciendo el valor de `type` puede definir diferentes tipos, el predeterminado es `info`. En tales casos el cuerpo principal se pasa como el valor de `message`. También, hay registrados métodos para los diferentes tipos, así que, puedes llamarlos sin necesidad de pasar un tipo como `open4`. `primary` has been added in ^(2.9.11).
 
