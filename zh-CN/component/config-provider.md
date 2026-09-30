@@ -73,9 +73,9 @@ config-provider/message
 
 </details>
 
-设置 `empty-values` 来配置组件的默认空值。 默认值是 `['', null, undefined]`。 如果认为空字符串不是一个空值，可以设置成 `[undefined, null]`。
+设置 `empty-values` 来配置组件的默认空值。默认值是 `['', null, undefined]`。如果认为空字符串不是一个空值，可以设置成 `[undefined, null]`。
 
-设置 `value-on-clear` 以设置清空选项的值。 组件默认值是 `undefined`。 在日期组件中是 `null`。 如果想设置成 `undefined`，请使用 `() => undefined`。
+设置 `value-on-clear` 以设置清空选项的值。组件默认值是 `undefined`。在日期组件中是 `null`。如果想设置成 `undefined`，请使用 `() => undefined`。
 
 :::demo
 
@@ -93,7 +93,7 @@ config-provider/table
 
 ## 实验性功能
 
-在本节中，您可以学习如何使用 Config Provider 来提供实验性功能。 现在，我们还没有添加任何实验性功能，但在未来的规划中，我们将添加一些实验性功能。 您可以使用此配置来管理这些功能。
+在本节中，您可以学习如何使用 Config Provider 来提供实验性功能。现在，我们还没有添加任何实验性功能，但在未来的规划中，我们将添加一些实验性功能。您可以使用此配置来管理这些功能。
 
  <!-- TODO -->
 
@@ -142,12 +142,12 @@ config-provider/table
 
 ### Dialog 属性
 
-| 属性                     | 描述                                                  | 类型                                     | 默认值   |
-| ---------------------- | --------------------------------------------------- | -------------------------------------- | ----- |
-| align-center ^(2.10.7) | 是否水平垂直对齐对话框                                         | ^[boolean]                             | false |
-| draggable ^(2.10.7)    | 为 Dialog 启用可拖拽功能                                    | ^[boolean]                             | false |
-| overflow ^(2.10.7)     | 拖动范围可以超出可视区                                         | ^[boolean]                             | false |
-| transition ^(2.10.7)   | 对话框动画的自定义过渡配置。 可以是一个字符串（过渡名称），也可以是一个包含 Vue 过渡属性的对象。 | ^[string] / ^[object]`TransitionProps` | —     |
+| 属性                     | 描述                                                 | 类型                                     | 默认值   |
+| ---------------------- | -------------------------------------------------- | -------------------------------------- | ----- |
+| align-center ^(2.10.7) | 是否水平垂直对齐对话框                                        | ^[boolean]                             | false |
+| draggable ^(2.10.7)    | 为 Dialog 启用可拖拽功能                                   | ^[boolean]                             | false |
+| overflow ^(2.10.7)     | 拖动范围可以超出可视区                                        | ^[boolean]                             | false |
+| transition ^(2.10.7)   | 对话框动画的自定义过渡配置。可以是一个字符串（过渡名称），也可以是一个包含 Vue 过渡属性的对象。 | ^[string] / ^[object]`TransitionProps` | —     |
 
 ### Message Attribute
 
@@ -155,7 +155,7 @@ config-provider/table
 | ------------------- | ------------------------- | --------------------------------------------------------------------------------------------- | --- |
 | max                 | 可同时显示的消息最大数量              | ^[number]                                                                                     | —   |
 | grouping ^(2.8.2)   | 合并内容相同的消息，不支持 VNode 类型的消息 | ^[boolean]                                                                                    | —   |
-| duration ^(2.8.2)   | 显示时间，单位为毫秒。 设为 0 则不会自动关闭  | ^[number]                                                                                     | —   |
+| duration ^(2.8.2)   | 显示时间，单位为毫秒。设为 0 则不会自动关闭   | ^[number]                                                                                     | —   |
 | showClose ^(2.8.2)  | 是否显示关闭按钮                  | ^[boolean]                                                                                    | —   |
 | offset ^(2.8.2)     | Message 距离窗口顶部的偏移量        | ^[number]                                                                                     | —   |
 | plain ^(2.9.11)     | 是否纯色                      | ^[boolean]                                                                                    | —   |

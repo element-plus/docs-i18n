@@ -17,7 +17,7 @@ color-picker-panel/basic
 
 ## 选择透明度
 
-:::demo ColorPickerPanel 支持Alpha 通道选择。 要激活 Alpha 选择，只需添加 "show-alpha" 属性。
+:::demo ColorPickerPanel 支持Alpha 通道选择。要激活 Alpha 选择，只需添加 "show-alpha" 属性。
 
 color-picker-panel/alpha
 

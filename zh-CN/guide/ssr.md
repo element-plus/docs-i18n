@@ -9,13 +9,13 @@ lang: zh-CN
 
 :::tip
 
-对于Nuxt 用户，我们提供的 [Nuxt 模块](https://github.com/element-plus/element-plus-nuxt) 已经包含了对这些问题的处理方案。 您只需要安装它就可以了。
+对于Nuxt 用户，我们提供的 [Nuxt 模块](https://github.com/element-plus/element-plus-nuxt) 已经包含了对这些问题的处理方案。您只需要安装它就可以了。
 
 :::
 
 ## 提供一个ID
 
-提供的值用于生成 ElementPlus 中的唯一ID。 因为不同的 IDs 容易发生SSR中的水合率错误， 为了确保服务器端和客户端生成相同的ID， 我们需要将 `ID_injection_key` 注入到 Vue。
+提供的值用于生成 ElementPlus 中的唯一ID。因为不同的 IDs 容易发生SSR中的水合率错误， 为了确保服务器端和客户端生成相同的ID， 我们需要将 `ID_injection_key` 注入到 Vue。
 
 ```ts [main.ts]
 // irrelevant code omitted
@@ -32,7 +32,7 @@ app.provide(ID_INJECTION_KEY, {
 
 ## 配置 ZIndex
 
-当您使用SSR进行开发时，您可能会遇到 `z-index` 引起的水合错误。 在这种情况下，我们建议注入一个初始值以避免这种错误。
+当您使用SSR进行开发时，您可能会遇到 `z-index` 引起的水合错误。在这种情况下，我们建议注入一个初始值以避免这种错误。
 
 ```ts [main.ts]
 // irrelevant code omitted

@@ -77,12 +77,12 @@ collapse/prevent-collapsing
 
 ### Collapse Attributes
 
-| 属性名                            | 详情                                                       | 类型                                                       | 默认值   |
-| ------------------------------ | -------------------------------------------------------- | -------------------------------------------------------- | ----- |
-| model-value / v-model          | 当前活动面板，在手风琴模式下其类型是`string`，在其他模式下是`array`                | ^[string] / ^[array]                                     | []    |
-| accordion                      | 是否手风琴模式                                                  | ^[boolean]                                               | false |
-| expand-icon-position ^(2.9.10) | 设置展开图标位置                                                 | ^[enum]`'left' \| 'right'`                              | right |
-| before-collapse ^(2.9.11)      | 折叠状态更改之前的折叠钩子。 返回 `false` 或者返回 `Promise` 且被 reject 则停止切换 | ^[Function]`() => Promise<boolean> \| boolean` | —     |
+| 属性名                            | 详情                                                      | 类型                                                       | 默认值   |
+| ------------------------------ | ------------------------------------------------------- | -------------------------------------------------------- | ----- |
+| model-value / v-model          | 当前活动面板，在手风琴模式下其类型是`string`，在其他模式下是`array`               | ^[string] / ^[array]                                     | []    |
+| accordion                      | 是否手风琴模式                                                 | ^[boolean]                                               | false |
+| expand-icon-position ^(2.9.10) | 设置展开图标位置                                                | ^[enum]`'left' \| 'right'`                              | right |
+| before-collapse ^(2.9.11)      | 折叠状态更改之前的折叠钩子。返回 `false` 或者返回 `Promise` 且被 reject 则停止切换 | ^[Function]`() => Promise<boolean> \| boolean` | —     |
 
 ### Collapse Events
 

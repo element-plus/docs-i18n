@@ -19,7 +19,7 @@ button/basic
 
 你可以使用 `disabled` 属性来定义按钮是否被禁用。
 
-:::demo 使用 `disabled` 属性来控制按钮是否为禁用状态。 该属性接受一个 `Boolean` 类型的值。
+:::demo 使用 `disabled` 属性来控制按钮是否为禁用状态。该属性接受一个 `Boolean` 类型的值。
 
 button/disabled
 
@@ -47,7 +47,7 @@ button/link
 
 文字按钮在现在有了全新的设计样式。 <el-tag round effect="plain" size="small">2.2.0</el-tag> 如果您想要使用老版样式的按钮，可以考虑使用 [Link](./link.md#basic) 组件。
 
-API也已更新，由于 `type` 属性会同时控制按钮的样式， 因此我们通过一个新的 API `text: boolean` 来控制文字按钮。
+API也已更新，由于 `type` 属性会同时控制按钮的样式，因此我们通过一个新的 API `text: boolean` 来控制文字按钮。
 
 :::
 
@@ -61,9 +61,9 @@ button/text
 
 ## 图标按钮
 
-使用图标为按钮添加更多的含义。 你也可以单独使用图标不添加文字来节省显示区域占用。
+使用图标为按钮添加更多的含义。你也可以单独使用图标不添加文字来节省显示区域占用。
 
-:::demo 使用 `icon` 属性来为按钮添加图标。 您可以在我们的 Icon 组件中找到所需图标。 通过向右方添加`<i>`标签来添加图标， 你也可以使用自定义图标。
+:::demo 使用 `icon` 属性来为按钮添加图标。您可以在我们的 Icon 组件中找到所需图标。通过向右方添加`<i>`标签来添加图标，你也可以使用自定义图标。
 
 button/icon
 
@@ -139,27 +139,27 @@ button/custom
 
 ### Button Attributes
 
-| 属性名               | 说明                                                                          | 类型                                                                                                                  | 默认值     |
-| ----------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------- |
-| size              | 尺寸                                                                          | ^[enum]`'large' \| 'default' \| 'small'`                                                                          | —       |
-| type              | 按钮类型，在设置`color`时，后者优先。                                                      | ^[enum]`'default' \| 'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| '' \| 'text' (deprecated)` | —       |
-| plain             | 是否为朴素按钮                                                                     | ^[boolean]                                                                                                          | false   |
-| text ^(2.2.0)     | 是否为文字按钮                                                                     | ^[boolean]                                                                                                          | false   |
-| bg ^(2.2.0)       | 是否显示文字按钮背景颜色                                                                | ^[boolean]                                                                                                          | false   |
-| link ^(2.2.1)     | 是否为链接按钮                                                                     | ^[boolean]                                                                                                          | false   |
-| round             | 是否为圆角按钮                                                                     | ^[boolean]                                                                                                          | false   |
-| circle            | 是否为圆形按钮                                                                     | ^[boolean]                                                                                                          | false   |
-| dashed ^(2.13.3)  | 是否是虚线按钮                                                                     | ^[boolean]                                                                                                          | false   |
-| loading           | 是否为加载中状态                                                                    | ^[boolean]                                                                                                          | false   |
-| loading-icon      | 自定义加载中状态图标组件                                                                | ^[string] / ^[Component]                                                                                            | Loading |
-| disabled          | 按钮是否为禁用状态                                                                   | ^[boolean]                                                                                                          | false   |
-| icon              | 图标组件                                                                        | ^[string] / ^[Component]                                                                                            | —       |
-| autofocus         | 原生 `autofocus` 属性                                                           | ^[boolean]                                                                                                          | false   |
-| native-type       | 原生 type 属性                                                                  | ^[enum]`'button' \| 'submit' \| 'reset'`                                                                          | button  |
-| auto-insert-space | 两个中文字符之间自动插入空格(仅当文本长度为 2 且所有字符均为中文时才生效)                                     | ^[boolean]                                                                                                          | false   |
-| color             | 自定义按钮颜色, 并自动计算 `hover` 和 `active` 触发后的颜色 自 ^(2.13.7) 起，支持 `link`/`text` 按钮。 | ^[string]                                                                                                           | —       |
-| dark              | dark 模式, 意味着自动设置 `color` 为 dark 模式的颜色                                       | ^[boolean]                                                                                                          | false   |
-| tag ^(2.3.4)      | 自定义元素标签                                                                     | ^[string] / ^[Component]                                                                                            | button  |
+| 属性名               | 说明                                                                         | 类型                                                                                                                  | 默认值     |
+| ----------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------- |
+| size              | 尺寸                                                                         | ^[enum]`'large' \| 'default' \| 'small'`                                                                          | —       |
+| type              | 按钮类型，在设置`color`时，后者优先。                                                     | ^[enum]`'default' \| 'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| '' \| 'text' (deprecated)` | —       |
+| plain             | 是否为朴素按钮                                                                    | ^[boolean]                                                                                                          | false   |
+| text ^(2.2.0)     | 是否为文字按钮                                                                    | ^[boolean]                                                                                                          | false   |
+| bg ^(2.2.0)       | 是否显示文字按钮背景颜色                                                               | ^[boolean]                                                                                                          | false   |
+| link ^(2.2.1)     | 是否为链接按钮                                                                    | ^[boolean]                                                                                                          | false   |
+| round             | 是否为圆角按钮                                                                    | ^[boolean]                                                                                                          | false   |
+| circle            | 是否为圆形按钮                                                                    | ^[boolean]                                                                                                          | false   |
+| dashed ^(2.13.3)  | 是否是虚线按钮                                                                    | ^[boolean]                                                                                                          | false   |
+| loading           | 是否为加载中状态                                                                   | ^[boolean]                                                                                                          | false   |
+| loading-icon      | 自定义加载中状态图标组件                                                               | ^[string] / ^[Component]                                                                                            | Loading |
+| disabled          | 按钮是否为禁用状态                                                                  | ^[boolean]                                                                                                          | false   |
+| icon              | 图标组件                                                                       | ^[string] / ^[Component]                                                                                            | —       |
+| autofocus         | 原生 `autofocus` 属性                                                          | ^[boolean]                                                                                                          | false   |
+| native-type       | 原生 type 属性                                                                 | ^[enum]`'button' \| 'submit' \| 'reset'`                                                                          | button  |
+| auto-insert-space | 两个中文字符之间自动插入空格(仅当文本长度为 2 且所有字符均为中文时才生效)                                    | ^[boolean]                                                                                                          | false   |
+| color             | 自定义按钮颜色, 并自动计算 `hover` 和 `active` 触发后的颜色自 ^(2.13.7) 起，支持 `link`/`text` 按钮。 | ^[string]                                                                                                           | —       |
+| dark              | dark 模式, 意味着自动设置 `color` 为 dark 模式的颜色                                      | ^[boolean]                                                                                                          | false   |
+| tag ^(2.3.4)      | 自定义元素标签                                                                    | ^[string] / ^[Component]                                                                                            | button  |
 
 ### Button Slots
 

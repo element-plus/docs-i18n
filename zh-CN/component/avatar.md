@@ -5,7 +5,7 @@ lang: zh-CN
 
 # Avatar 头像
 
-Avatar 组件可以用来代表人物或对象， 支持使用图片、图标或者文字作为 Avatar。
+Avatar 组件可以用来代表人物或对象，支持使用图片、图标或者文字作为 Avatar。
 
 ## 基础用法
 
@@ -87,16 +87,16 @@ avatar/group
 
 ### AvatarGroup Attributes
 
-| 方法名                      | 详情                                                            | Type                                                                                                                                                                                   | 默认    |
-| ------------------------ | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
-| size                     | 控制头像组中的头像大小                                                   | ^[number] / ^[enum]`'large' \| 'default' \| 'small'`                                                                                                                                 | —     |
-| shape                    | 控制头像组中的头像形状                                                   | ^[enum]`'circle' \| 'square'`                                                                                                                                                         | —     |
-| collapse-avatars         | 是否折叠头像                                                        | ^[boolean]                                                                                                                                                                             | false |
-| collapse-avatars-tooltip | 是否在鼠标悬停折叠头像的文字时显示所有折叠头像。 若要使用此功能， `collapse-avatars` 必须为 true | ^[boolean]                                                                                                                                                                             | false |
-| max-collapse-avatars     | 需要显示的头像的最大数量 若要使用此功能， `collapse-avatars` 必须为 true             | ^[number]                                                                                                                                                                              | 1     |
-| effect                   | tooltip 主题，内置了 `dark` / `light` 两种                            | ^[enum]`'dark' \| 'light'` / ^[string]                                                                                                                                                | light |
-| placement                | tooltip 的位置                                                   | ^[enum]`'top' \| 'top-start' \| 'top-end' \| 'bottom' \| 'bottom-start' \| 'bottom-end' \| 'left' \| 'left-start' \| 'left-end' \| 'right' \| 'right-start' \| 'right-end'` | top   |
-| popper-class             | tooltip 的自定义类名                                                | ^[string]                                                                                                                                                                              | ''    |
-| popper-style             | tooltip 的自定义样式                                                | ^[string] / ^[object]                                                                                                                                                                  | —     |
-| collapse-class           | collapse-avatar 的自定义类名                                        | ^[string]                                                                                                                                                                              | ''    |
-| collapse-style           | collapse-avatar 的自定义样式                                        | ^[string] / ^[object]                                                                                                                                                                  | —     |
+| 方法名                      | 详情                                                           | Type                                                                                                                                                                                   | 默认    |
+| ------------------------ | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| size                     | 控制头像组中的头像大小                                                  | ^[number] / ^[enum]`'large' \| 'default' \| 'small'`                                                                                                                                 | —     |
+| shape                    | 控制头像组中的头像形状                                                  | ^[enum]`'circle' \| 'square'`                                                                                                                                                         | —     |
+| collapse-avatars         | 是否折叠头像                                                       | ^[boolean]                                                                                                                                                                             | false |
+| collapse-avatars-tooltip | 是否在鼠标悬停折叠头像的文字时显示所有折叠头像。若要使用此功能， `collapse-avatars` 必须为 true | ^[boolean]                                                                                                                                                                             | false |
+| max-collapse-avatars     | 需要显示的头像的最大数量若要使用此功能， `collapse-avatars` 必须为 true             | ^[number]                                                                                                                                                                              | 1     |
+| effect                   | tooltip 主题，内置了 `dark` / `light` 两种                           | ^[enum]`'dark' \| 'light'` / ^[string]                                                                                                                                                | light |
+| placement                | tooltip 的位置                                                  | ^[enum]`'top' \| 'top-start' \| 'top-end' \| 'bottom' \| 'bottom-start' \| 'bottom-end' \| 'left' \| 'left-start' \| 'left-end' \| 'right' \| 'right-start' \| 'right-end'` | top   |
+| popper-class             | tooltip 的自定义类名                                               | ^[string]                                                                                                                                                                              | ''    |
+| popper-style             | tooltip 的自定义样式                                               | ^[string] / ^[object]                                                                                                                                                                  | —     |
+| collapse-class           | collapse-avatar 的自定义类名                                       | ^[string]                                                                                                                                                                              | ''    |
+| collapse-style           | collapse-avatar 的自定义样式                                       | ^[string] / ^[object]                                                                                                                                                                  | —     |

@@ -5,7 +5,7 @@ lang: zh-CN
 
 :::warning 废弃的  directive
 
-我们将不再维护这个 directive。 会在 ^(3.0.0) **被移除**，请使用 [el-scrollbar infinite scroll](./scrollbar#infinite-scroll) 作为代替。
+我们将不再维护这个 directive。会在 ^(3.0.0) **被移除**，请使用 [el-scrollbar infinite scroll](./scrollbar#infinite-scroll) 作为代替。
 
 :::
 

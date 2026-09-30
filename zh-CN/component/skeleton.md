@@ -41,7 +41,7 @@ skeleton/animation
 
 Element Plus 提供的排版模式有时候并不满足要求，当您想要用自己定义的模板时，可以通过一个具名 Slot `template` 来自己设定模板。
 
-我们提供了不同的模板单元可供使用，具体可选值请看 API 详细描述。 另外，在构建您自己自定义的骨架时，您应该尽可能更接近于真正的DOM。 避免DOM因高度差而发生抖动。
+我们提供了不同的模板单元可供使用，具体可选值请看 API 详细描述。另外，在构建您自己自定义的骨架时，您应该尽可能更接近于真正的DOM。 避免DOM因高度差而发生抖动。
 
 :::demo
 
@@ -51,7 +51,7 @@ skeleton/customized-template
 
 ## 加载状态
 
-当 `Loading` 结束之后，我们往往需要显示真实的 UI， 可以通过 `loading` 属性的值来控制是否显示加载后的 DOM。 也可以通过具名插槽 `default` 来构建 loading 结束之后需要展示的真实 DOM 元素结构。
+当 `Loading` 结束之后，我们往往需要显示真实的 UI，可以通过 `loading` 属性的值来控制是否显示加载后的 DOM。也可以通过具名插槽 `default` 来构建 loading 结束之后需要展示的真实 DOM 元素结构。
 
 :::demo
 
@@ -65,7 +65,7 @@ skeleton/loading-state
 
 :::tip
 
-我们不推荐在浏览器中渲染过多的虚假 UI 元素，这样会消耗更多时间销毁骨架元素，从而引起性能问题。 为了用户体验，请尽量将 `count` 值保持在小一点的数值。
+我们不推荐在浏览器中渲染过多的虚假 UI 元素，这样会消耗更多时间销毁骨架元素，从而引起性能问题。为了用户体验，请尽量将 `count` 值保持在小一点的数值。
 
 :::
 
@@ -77,11 +77,11 @@ skeleton/rendering-with-data
 
 ## 防止渲染抖动
 
-有的时候，API 的请求回来的特别快，往往骨架占位刚刚被渲染，真实的数据就已经回来了，用户的界面会突然一闪， 此时为了避免这种情况，就需要通过 `throttle` 属性来避免这个问题。
+有的时候，API 的请求回来的特别快，往往骨架占位刚刚被渲染，真实的数据就已经回来了，用户的界面会突然一闪，此时为了避免这种情况，就需要通过 `throttle` 属性来避免这个问题。
 
 :::tip
 
-^(2.8.8)版本里， `throtle` 属性支持两个值： `number` 和 `object`。 当通过 `number`时，它相当于 `{leading: xxx}`，控制骨架屏幕显示的节奏。 当然，您也可以通过传递 `{trailing: xxx}` 来控制骨架屏消失的节奏。
+^(2.8.8)版本里， `throtle` 属性支持两个值： `number` 和 `object`。当通过 `number`时，它相当于 `{leading: xxx}`，控制骨架屏幕显示的节奏。当然，您也可以通过传递 `{trailing: xxx}` 来控制骨架屏消失的节奏。
 
 :::
 
@@ -109,7 +109,7 @@ skeleton/initial-rendering-loading
 
 :::
 
-有时，当加载状态切换显示或隐藏时，您可能希望业务组件的渲染更加平滑。 您可以设置 `throttle: {leading: xxx, trailing: xxx}` 来控制渲染抖动。
+有时，当加载状态切换显示或隐藏时，您可能希望业务组件的渲染更加平滑。您可以设置 `throttle: {leading: xxx, trailing: xxx}` 来控制渲染抖动。
 
 :::demo
 
@@ -123,13 +123,13 @@ skeleton/leading-trailing-without-bouncing
 
 ### Skeleton Attributes
 
-| 属性名      | 说明                                                                                                            | 类型                                                                                | 默认值   |
-| -------- | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ----- |
-| animated | 是否使用动画                                                                                                        | ^[boolean]                                                                        | false |
-| count    | 渲染多少个 template, 建议使用尽可能小的数字                                                                                   | ^[number]                                                                         | 1     |
-| loading  | 是否显示加载结束后的 DOM 结构                                                                                             | ^[boolean]                                                                        | false |
-| rows     | 骨架屏段落数量                                                                                                       | ^[number]                                                                         | 3     |
-| throttle | 渲染延迟（以毫秒为单位） 数字代表延迟显示, 也可以设置为延迟隐藏, 例如 `{ leading: 500, trailing: 500 }` 当需要控制初始加载值时，您可以设置 `{ initVal: true }` | ^[number] / ^[object]`{ leading?: number, trailing?: number, initVal?: boolean }` | 0     |
+| 属性名      | 说明                                                                                                           | 类型                                                                                | 默认值   |
+| -------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- | ----- |
+| animated | 是否使用动画                                                                                                       | ^[boolean]                                                                        | false |
+| count    | 渲染多少个 template, 建议使用尽可能小的数字                                                                                  | ^[number]                                                                         | 1     |
+| loading  | 是否显示加载结束后的 DOM 结构                                                                                            | ^[boolean]                                                                        | false |
+| rows     | 骨架屏段落数量                                                                                                      | ^[number]                                                                         | 3     |
+| throttle | 渲染延迟（以毫秒为单位）数字代表延迟显示, 也可以设置为延迟隐藏, 例如 `{ leading: 500, trailing: 500 }` 当需要控制初始加载值时，您可以设置 `{ initVal: true }` | ^[number] / ^[object]`{ leading?: number, trailing?: number, initVal?: boolean }` | 0     |
 
 ### Skeleton Slots
 

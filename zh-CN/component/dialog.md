@@ -11,7 +11,7 @@ lang: zh-CN
 
 Dialog 弹出一个对话框，适合需要定制性更大的场景。
 
-:::demo 需要设置 `model-value / v-model` 属性，它接收 `Boolean`，当为 `true` 时显示 Dialog。 Dialog 分为两个部分：`body` 和 `footer`，`footer` 需要具名为 `footer` 的 `slot`。 `title` 属性用于定义标题，它是可选的，默认值为空。 最后，本例还展示了 `before-close` 的用法。
+:::demo 需要设置 `model-value / v-model` 属性，它接收 `Boolean`，当为 `true` 时显示 Dialog。 Dialog 分为两个部分：`body` 和 `footer`，`footer` 需要具名为 `footer` 的 `slot`。 `title` 属性用于定义标题，它是可选的，默认值为空。最后，本例还展示了 `before-close` 的用法。
 
 dialog/basic-usage
 
@@ -19,13 +19,13 @@ dialog/basic-usage
 
 :::tip
 
-`before-close` 只会在用户点击关闭按钮或者对话框的遮罩区域时被调用。 如果你在 `footer` 具名 slot 里添加了用于关闭 Dialog 的按钮，那么可以在按钮的点击回调函数里加入 `before-close` 的相关逻辑。
+`before-close` 只会在用户点击关闭按钮或者对话框的遮罩区域时被调用。如果你在 `footer` 具名 slot 里添加了用于关闭 Dialog 的按钮，那么可以在按钮的点击回调函数里加入 `before-close` 的相关逻辑。
 
 :::
 
 ## 自定义内容
 
-对话框的内容可以是任何东西，甚至是一个表格或表单。 此示例显示如何在 Dialog 中使用 Element Plus 的表格和表单。
+对话框的内容可以是任何东西，甚至是一个表格或表单。此示例显示如何在 Dialog 中使用 Element Plus 的表格和表单。
 
 :::demo
 
@@ -35,7 +35,7 @@ dialog/customization-content
 
 ## 自定义头部
 
-`header` 可用于自定义显示标题的区域。 为了保持可用性，除了使用此插槽外，使用 `title` 属性，或使用 `titleId` 插槽属性来指定哪些元素应该读取为对话框标题。
+`header` 可用于自定义显示标题的区域。为了保持可用性，除了使用此插槽外，使用 `title` 属性，或使用 `titleId` 插槽属性来指定哪些元素应该读取为对话框标题。
 
 :::demo
 
@@ -47,7 +47,7 @@ dialog/customization-header
 
 如果需要在一个 Dialog 内部嵌套另一个 Dialog，需要使用 `append-to-body` 属性。
 
-:::demo 通常我们不建议使用嵌套对话框。 如果你需要在页面上呈现多个对话框，你可以简单地打平它们，以便它们彼此之间是平级关系。 如果必须要在一个对话框内展示另一个对话框，可以将内部嵌套的对话框属性 `append-to-body` 设置为 true，嵌套的对话框将附加到 body 而不是其父节点，这样两个对话框都可以被正确地渲染。
+:::demo 通常我们不建议使用嵌套对话框。如果你需要在页面上呈现多个对话框，你可以简单地打平它们，以便它们彼此之间是平级关系。如果必须要在一个对话框内展示另一个对话框，可以将内部嵌套的对话框属性 `append-to-body` 设置为 true，嵌套的对话框将附加到 body 而不是其父节点，这样两个对话框都可以被正确地渲染。
 
 dialog/nested-dialog
 
@@ -57,7 +57,7 @@ dialog/nested-dialog
 
 对话框的内容可以居中。
 
-:::demo 将`center`设置为`true`即可使标题和底部居中。 `center`仅影响标题和底部区域。 Dialog 的内容是任意的，在一些情况下，内容并不适合居中布局。 如果需要内容也水平居中，请自行为其添加 CSS 样式。
+:::demo 将`center`设置为`true`即可使标题和底部居中。 `center`仅影响标题和底部区域。 Dialog 的内容是任意的，在一些情况下，内容并不适合居中布局。如果需要内容也水平居中，请自行为其添加 CSS 样式。
 
 dialog/centered-content
 
@@ -65,7 +65,7 @@ dialog/centered-content
 
 :::tip
 
-Dialog 的内容是懒渲染的——在被第一次打开之前，传入的默认 slot 不会被立即渲染到 DOM 上。 因此，如果需要执行 DOM 操作，或通过 `ref` 获取相应组件，请在 `open` 事件回调中进行。
+Dialog 的内容是懒渲染的——在被第一次打开之前，传入的默认 slot 不会被立即渲染到 DOM 上。因此，如果需要执行 DOM 操作，或通过 `ref` 获取相应组件，请在 `open` 事件回调中进行。
 
 :::
 
@@ -73,7 +73,7 @@ Dialog 的内容是懒渲染的——在被第一次打开之前，传入的默�
 
 从屏幕中心打开对话框。
 
-:::demo 设置 `align-center` 为 `true` 使对话框水平垂直居中。 由于对话框垂直居中在弹性盒子中，所以`top`属性将不起作用。
+:::demo 设置 `align-center` 为 `true` 使对话框水平垂直居中。由于对话框垂直居中在弹性盒子中，所以`top`属性将不起作用。
 
 dialog/align-center
 
@@ -81,7 +81,7 @@ dialog/align-center
 
 ## 关闭时销毁
 
-启用此功能时，默认栏位下的内容将使用 `v-if` 指令销毁。 当出现性能问题时，可以启用此功能。
+启用此功能时，默认栏位下的内容将使用 `v-if` 指令销毁。当出现性能问题时，可以启用此功能。
 
 :::demo 需要注意的是，当这个属性被启用时，在 `transition.beforeEnter` 事件卸载前，除了 `overlay`、`header (可选)`与`footer(可选)` ，Dialog 内不会有其它任何其它的 DOM 节点存在。
 
@@ -93,7 +93,7 @@ dialog/destroy-on-close
 
 试着拖动一下`header`部分吧
 
-:::demo 设置`draggable`属性为`true`以做到拖拽 设置 `overflow` ^(2.5.4) 为 `true` 可以让拖拽范围超出可视区。
+:::demo 设置`draggable`属性为`true`以做到拖拽设置 `overflow` ^(2.5.4) 为 `true` 可以让拖拽范围超出可视区。
 
 dialog/draggable-dialog
 
@@ -149,7 +149,7 @@ dialog/custom-animation
 
 :::tip
 
-动画类会根据过渡名称动态生成。 为了更细致地控制动画行为，你可以明确地定义这些类。 详情请参见 [自定义过渡类（custom-transition-classes）](https://vuejs.org/guide/built-ins/transition.html#custom-transition-classes)。
+动画类会根据过渡名称动态生成。为了更细致地控制动画行为，你可以明确地定义这些类。详情请参见 [自定义过渡类（custom-transition-classes）](https://vuejs.org/guide/built-ins/transition.html#custom-transition-classes)。
 
 :::
 
@@ -180,8 +180,8 @@ dialog/events
 | header-class ^(2.9.3)      | header 部分的自定义 class 名                                    | ^[string]                              | —           |
 | body-class ^(2.9.3)        | body 部分的自定义 class 名                                      | ^[string]                              | —           |
 | footer-class ^(2.9.3)      | footer 部分的自定义 class 名                                    | ^[string]                              | —           |
-| append-to-body             | Dialog 自身是否插入至 body 元素上。 嵌套的 Dialog 必须指定该属性并赋值为 `true`   | ^[boolean]                             | false       |
-| append-to ^(2.4.3)         | Dialog 挂载到哪个 DOM 元素 将覆盖 `append-to-body`                 | ^[CSSSelector] / ^[HTMLElement]        | body        |
+| append-to-body             | Dialog 自身是否插入至 body 元素上。嵌套的 Dialog 必须指定该属性并赋值为 `true`    | ^[boolean]                             | false       |
+| append-to ^(2.4.3)         | Dialog 挂载到哪个 DOM 元素将覆盖 `append-to-body`                  | ^[CSSSelector] / ^[HTMLElement]        | body        |
 | lock-scroll                | 是否在 Dialog 出现时将 body 滚动锁定                                | ^[boolean]                             | true        |
 | open-delay                 | dialog 打开的延时时间，单位毫秒                                      | ^[number]                              | 0           |
 | close-delay                | dialog 关闭的延时时间，单位毫秒                                      | ^[number]                              | 0           |
@@ -197,7 +197,7 @@ dialog/events
 | close-icon                 | 自定义关闭图标，默认 Close                                         | ^[string] / ^[Component]               | —           |
 | z-index                    | 和原生的 CSS 的 z-index 相同，改变 z 轴的顺序                          | ^[number]                              | —           |
 | header-aria-level ^(a11y)  | header 的 `aria-level` 属性                                 | ^[string]                              | 2           |
-| transition ^(2.10.5)       | 对话框动画的自定义过渡配置。 可以是一个字符串（过渡名称），也可以是一个包含 Vue 过渡属性的对象。      | ^[string] / ^[object]`TransitionProps` | dialog-fade |
+| transition ^(2.10.5)       | 对话框动画的自定义过渡配置。可以是一个字符串（过渡名称），也可以是一个包含 Vue 过渡属性的对象。       | ^[string] / ^[object]`TransitionProps` | dialog-fade |
 | custom-class ^(deprecated) | Dialog 的自定义类名                                            | ^[string]                              | ''          |
 
 :::warning
@@ -213,7 +213,7 @@ dialog/events
 | default             | 对话框的默认内容                    |
 | header              | 对话框标题的内容；会替换标题部分，但不会移除关闭按钮。 |
 | footer              | Dialog 按钮操作区的内容             |
-| title ^(deprecated) | 与 header 作用相同 请使用 header    |
+| title ^(deprecated) | 与 header 作用相同请使用 header     |
 
 :::warning
 

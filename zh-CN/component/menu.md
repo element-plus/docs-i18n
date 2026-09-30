@@ -23,7 +23,7 @@ lang: zh-CN
 
 顶部栏菜单可以在各种场景中使用。
 
-:::demo 导航菜单默认为垂直模式，通过将 mode 属性设置为 horizontal 来使导航菜单变更为水平模式。 另外，在菜单中通过 sub-menu 组件可以生成二级菜单。 Menu 还提供了`background-color`、`text-color`和`active-text-color`，分别用于设置菜单的背景色、菜单的文字颜色和当前激活菜单的文字颜色。
+:::demo 导航菜单默认为垂直模式，通过将 mode 属性设置为 horizontal 来使导航菜单变更为水平模式。另外，在菜单中通过 sub-menu 组件可以生成二级菜单。 Menu 还提供了`background-color`、`text-color`和`active-text-color`，分别用于设置菜单的背景色、菜单的文字颜色和当前激活菜单的文字颜色。
 
 menu/basic
 
@@ -71,29 +71,29 @@ menu/popper-offset
 
 ### Menu Attributes
 
-| 属性名                             | 说明                                                                                       | 类型                                      | Default  |
-| ------------------------------- | ---------------------------------------------------------------------------------------- | --------------------------------------- | -------- |
-| mode                            | 菜单展示模式                                                                                   | ^[enum]`'horizontal' \| 'vertical'`    | vertical |
-| collapse                        | 是否水平折叠收起菜单（仅在 mode 为 vertical 时可用）                                                       | ^[boolean]                              | false    |
-| ellipsis                        | 是否省略多余的子项（仅在横向模式生效）                                                                      | ^[boolean]                              | true     |
-| ellipsis-icon ^(2.4.4)          | 自定义省略图标 (仅在水平模式下可用)                                                                      | ^[string] / ^[Component]                | —        |
-| popper-offset ^(2.4.4)          | 弹出层的偏移量(对所有子菜单有效)                                                                        | ^[number]                               | 6        |
-| default-active                  | 页面加载时默认激活菜单的 index                                                                       | ^[string]                               | ''       |
-| default-openeds                 | 默认打开的 sub-menu 的 index 的数组                                                               | ^[array]`string[]`                      | []       |
-| unique-opened                   | 是否只保持一个子菜单的展开                                                                            | ^[boolean]                              | false    |
-| menu-trigger                    | 子菜单打开的触发方式，只在 `mode` 为 horizontal 时有效。                                                   | ^[enum]`'hover' \| 'click'`            | hover    |
-| router                          | 是否启用 `vue-router` 模式。 启用该模式会在激活导航时以 index 作为 path 进行路由跳转 使用 `default-active` 来设置加载时的激活项。 | ^[boolean]                              | false    |
-| collapse-transition             | 是否开启折叠动画                                                                                 | ^[boolean]                              | true     |
-| popper-effect ^(2.2.26)         | Tooltip 主题，内置了 `dark` / `light` 两种主题，当菜单折叠时生效。                                           | ^[enum]`'dark' \| 'light'` / ^[string] | dark     |
-| close-on-click-outside ^(2.4.4) | 可选，单击外部时是否折叠菜单                                                                           | ^[boolean]                              | false    |
-| popper-class ^(2.5.0)           | 用于所有弹出菜单和标题提示的自定义类名                                                                      | ^[string]                               | —        |
-| popper-style ^(2.11.5)          | 用于所有弹出菜单和标题提示的自定义样式                                                                      | ^[string] / ^[object]                   | —        |
-| show-timeout ^(2.5.0)           | 菜单出现前的延迟                                                                                 | ^[number]                               | 300      |
-| hide-timeout ^(2.5.0)           | 菜单消失前的延迟                                                                                 | ^[number]                               | 300      |
-| background-color ^(deprecated)  | 菜单的背景颜色 (十六进制格式) (推荐在样式类中使用 `--el-menu-bg-color`)                                        | ^[string]                               | #ffffff  |
-| text-color ^(deprecated)        | 菜单的文字颜色 (十六进制格式) (推荐在样式类中使用 `--el-menu-text-color`)                                      | ^[string]                               | #303133  |
-| active-text-color ^(deprecated) | 活动菜单项的文本颜色（十六进制格式）（推荐使用 css var `--el-menu-active-color`）                                | ^[string]                               | #409eff  |
-| persistent ^(2.9.5)             | 当菜单处于非活动状态且 `persistent` 为 `false` 时，下拉菜单将被销毁                                            | ^[boolean]                              | true     |
+| 属性名                             | 说明                                                                                     | 类型                                      | Default  |
+| ------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------- | -------- |
+| mode                            | 菜单展示模式                                                                                 | ^[enum]`'horizontal' \| 'vertical'`    | vertical |
+| collapse                        | 是否水平折叠收起菜单（仅在 mode 为 vertical 时可用）                                                     | ^[boolean]                              | false    |
+| ellipsis                        | 是否省略多余的子项（仅在横向模式生效）                                                                    | ^[boolean]                              | true     |
+| ellipsis-icon ^(2.4.4)          | 自定义省略图标 (仅在水平模式下可用)                                                                    | ^[string] / ^[Component]                | —        |
+| popper-offset ^(2.4.4)          | 弹出层的偏移量(对所有子菜单有效)                                                                      | ^[number]                               | 6        |
+| default-active                  | 页面加载时默认激活菜单的 index                                                                     | ^[string]                               | ''       |
+| default-openeds                 | 默认打开的 sub-menu 的 index 的数组                                                             | ^[array]`string[]`                      | []       |
+| unique-opened                   | 是否只保持一个子菜单的展开                                                                          | ^[boolean]                              | false    |
+| menu-trigger                    | 子菜单打开的触发方式，只在 `mode` 为 horizontal 时有效。                                                 | ^[enum]`'hover' \| 'click'`            | hover    |
+| router                          | 是否启用 `vue-router` 模式。启用该模式会在激活导航时以 index 作为 path 进行路由跳转使用 `default-active` 来设置加载时的激活项。 | ^[boolean]                              | false    |
+| collapse-transition             | 是否开启折叠动画                                                                               | ^[boolean]                              | true     |
+| popper-effect ^(2.2.26)         | Tooltip 主题，内置了 `dark` / `light` 两种主题，当菜单折叠时生效。                                         | ^[enum]`'dark' \| 'light'` / ^[string] | dark     |
+| close-on-click-outside ^(2.4.4) | 可选，单击外部时是否折叠菜单                                                                         | ^[boolean]                              | false    |
+| popper-class ^(2.5.0)           | 用于所有弹出菜单和标题提示的自定义类名                                                                    | ^[string]                               | —        |
+| popper-style ^(2.11.5)          | 用于所有弹出菜单和标题提示的自定义样式                                                                    | ^[string] / ^[object]                   | —        |
+| show-timeout ^(2.5.0)           | 菜单出现前的延迟                                                                               | ^[number]                               | 300      |
+| hide-timeout ^(2.5.0)           | 菜单消失前的延迟                                                                               | ^[number]                               | 300      |
+| background-color ^(deprecated)  | 菜单的背景颜色 (十六进制格式) (推荐在样式类中使用 `--el-menu-bg-color`)                                      | ^[string]                               | #ffffff  |
+| text-color ^(deprecated)        | 菜单的文字颜色 (十六进制格式) (推荐在样式类中使用 `--el-menu-text-color`)                                    | ^[string]                               | #303133  |
+| active-text-color ^(deprecated) | 活动菜单项的文本颜色（十六进制格式）（推荐使用 css var `--el-menu-active-color`）                              | ^[string]                               | #409eff  |
+| persistent ^(2.9.5)             | 当菜单处于非活动状态且 `persistent` 为 `false` 时，下拉菜单将被销毁                                          | ^[boolean]                              | true     |
 
 ### Menu Events
 

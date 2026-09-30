@@ -11,7 +11,7 @@ lang: zh-CN
 
 Autocomplete 组件提供输入建议。
 
-:::demo `fetch-suggestions` 属性是返回建议输入的方法。 在此示例中， `querySearch(queryString, cb)` 方法通过 `cb(data)` 给 Autocomplete 组件返回建议。
+:::demo `fetch-suggestions` 属性是返回建议输入的方法。在此示例中， `querySearch(queryString, cb)` 方法通过 `cb(data)` 给 Autocomplete 组件返回建议。
 
 autocomplete/autocomplete
 
@@ -21,7 +21,7 @@ autocomplete/autocomplete
 
 自定义如何显示输入建议。
 
-:::demo 使用 `scoped slot` 自定义输入建议。 在这个范围中，你可以使用 `item` 键来访问当前输入建议对象。
+:::demo 使用 `scoped slot` 自定义输入建议。在这个范围中，你可以使用 `item` 键来访问当前输入建议对象。
 
 autocomplete/autocomplete-template
 
@@ -61,32 +61,32 @@ autocomplete/custom-header-footer
 
 ### Attributes
 
-| 属性名                                  | 说明                                                             | 类型                                                                                            | 默认值          |
-| ------------------------------------ | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------ |
-| model-value / v-model                | 选中项绑定值                                                         | ^[string]                                                                                     | —            |
-| placeholder                          | 占位文本                                                           | ^[string]                                                                                     | —            |
-| clearable                            | 是否可清空                                                          | ^[boolean]                                                                                    | false        |
-| disabled                             | 自动补全组件是否被禁用                                                    | ^[boolean]                                                                                    | false        |
-| value-key                            | 输入建议对象中用于显示的键名                                                 | ^[string]                                                                                     | value        |
-| debounce                             | 获取输入建议的防抖延时，单位为毫秒                                              | ^[number]                                                                                     | 300          |
-| placement                            | 菜单弹出位置                                                         | ^[enum]`'top' \| 'top-start' \| 'top-end' \| 'bottom' \| 'bottom-start' \| 'bottom-end'` | bottom-start |
-| fetch-suggestions                    | 获取输入建议的方法， 仅当你的输入建议数据 resolve 时，通过调用 `callback(data:[]) ` 来返回它 | ^[array] / ^[Function]`(queryString: string, callback: callbackfn) => void`                | —            |
-| trigger-on-focus                     | whether show suggestions when input focus                      | ^[boolean]                                                                                    | true         |
-| select-when-unmatched                | 在输入没有任何匹配建议的情况下，按下回车是否触发 `select` 事件                           | ^[boolean]                                                                                    | false        |
-| name                                 | 等价于原生 input `name` 属性                                          | ^[string]                                                                                     | —            |
-| aria-label ^(a11y) ^(2.7.2)          | 原生 `aria-label`属性                                              | ^[string]                                                                                     | —            |
-| hide-loading                         | 是否隐藏远程加载时的加载图标                                                 | ^[boolean]                                                                                    | false        |
-| popper-class                         | 下拉列表的类名                                                        | ^[string] / ^[object]                                                                         | ''           |
-| popper-style ^(2.11.4)               | autocomplete 下拉列表的类名                                           | ^[string] / ^[object]                                                                         | —            |
-| popper-options ^(2.14.0)             | [popper.js](https://popper.js.org/docs/v2/) parameters         | ^[object]refer to [popper.js](https://popper.js.org/docs/v2/) doc                             | {}           |
-| show-after ^(2.14.0)                 | 下拉菜单的内容是否有箭头                                                   | ^[boolean]                                                                                    | true         |
-| teleported                           | 是否将下拉列表元素插入 append-to 指向的元素下                                   | ^[boolean]                                                                                    | true         |
-| append-to ^(2.9.9)                   | 下拉框挂载到哪个 DOM 元素                                                | ^[CSSSelector] / ^[HTMLElement]                                                               | —            |
-| highlight-first-item                 | 是否默认高亮远程搜索结果的第一项                                               | ^[boolean]                                                                                    | false        |
-| fit-input-width                      | 下拉框的宽度是否与输入框相同                                                 | ^[boolean]                                                                                    | false        |
-| popper-append-to-body ^(deprecated)  | 是否将下拉列表插入至 body 元素。 在下拉列表的定位出现问题时，可将该属性设置为 false               | ^[boolean]                                                                                    | false        |
-| loop-navigation ^(2.11.4)            | 键盘导航是否从末尾循环到开头                                                 | ^[boolean]                                                                                    | true         |
-| [input props](./input.md#attributes) | —                                                              | —                                                                                             | —            |
+| 属性名                                  | 说明                                                            | 类型                                                                                            | 默认值          |
+| ------------------------------------ | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------ |
+| model-value / v-model                | 选中项绑定值                                                        | ^[string]                                                                                     | —            |
+| placeholder                          | 占位文本                                                          | ^[string]                                                                                     | —            |
+| clearable                            | 是否可清空                                                         | ^[boolean]                                                                                    | false        |
+| disabled                             | 自动补全组件是否被禁用                                                   | ^[boolean]                                                                                    | false        |
+| value-key                            | 输入建议对象中用于显示的键名                                                | ^[string]                                                                                     | value        |
+| debounce                             | 获取输入建议的防抖延时，单位为毫秒                                             | ^[number]                                                                                     | 300          |
+| placement                            | 菜单弹出位置                                                        | ^[enum]`'top' \| 'top-start' \| 'top-end' \| 'bottom' \| 'bottom-start' \| 'bottom-end'` | bottom-start |
+| fetch-suggestions                    | 获取输入建议的方法，仅当你的输入建议数据 resolve 时，通过调用 `callback(data:[]) ` 来返回它 | ^[array] / ^[Function]`(queryString: string, callback: callbackfn) => void`                | —            |
+| trigger-on-focus                     | whether show suggestions when input focus                     | ^[boolean]                                                                                    | true         |
+| select-when-unmatched                | 在输入没有任何匹配建议的情况下，按下回车是否触发 `select` 事件                          | ^[boolean]                                                                                    | false        |
+| name                                 | 等价于原生 input `name` 属性                                         | ^[string]                                                                                     | —            |
+| aria-label ^(a11y) ^(2.7.2)          | 原生 `aria-label`属性                                             | ^[string]                                                                                     | —            |
+| hide-loading                         | 是否隐藏远程加载时的加载图标                                                | ^[boolean]                                                                                    | false        |
+| popper-class                         | 下拉列表的类名                                                       | ^[string] / ^[object]                                                                         | ''           |
+| popper-style ^(2.11.4)               | autocomplete 下拉列表的类名                                          | ^[string] / ^[object]                                                                         | —            |
+| popper-options ^(2.14.0)             | [popper.js](https://popper.js.org/docs/v2/) parameters        | ^[object]refer to [popper.js](https://popper.js.org/docs/v2/) doc                             | {}           |
+| show-after ^(2.14.0)                 | 下拉菜单的内容是否有箭头                                                  | ^[boolean]                                                                                    | true         |
+| teleported                           | 是否将下拉列表元素插入 append-to 指向的元素下                                  | ^[boolean]                                                                                    | true         |
+| append-to ^(2.9.9)                   | 下拉框挂载到哪个 DOM 元素                                               | ^[CSSSelector] / ^[HTMLElement]                                                               | —            |
+| highlight-first-item                 | 是否默认高亮远程搜索结果的第一项                                              | ^[boolean]                                                                                    | false        |
+| fit-input-width                      | 下拉框的宽度是否与输入框相同                                                | ^[boolean]                                                                                    | false        |
+| popper-append-to-body ^(deprecated)  | 是否将下拉列表插入至 body 元素。在下拉列表的定位出现问题时，可将该属性设置为 false               | ^[boolean]                                                                                    | false        |
+| loop-navigation ^(2.11.4)            | 键盘导航是否从末尾循环到开头                                                | ^[boolean]                                                                                    | true         |
+| [input props](./input.md#attributes) | —                                                             | —                                                                                             | —            |
 
 ### Events
 

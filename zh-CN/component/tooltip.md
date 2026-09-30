@@ -11,7 +11,7 @@ lang: zh-CN
 
 在这里我们提供 9 种不同方向的展示方式，可以通过以下完整示例来理解，选择你要的效果。
 
-:::demo 使用 `content` 属性来决定 `hover` 时的提示信息。 由 `placement` 属性决定展示效果： `placement`属性值为：`[方向]-[对齐位置]`；四个方向：`top`、`left`、`right`、`bottom`；三种对齐位置：`start`, `end`，默认为空。 如 `placement="left-end"`，则提示信息出现在目标元素的左侧，且提示信息的底部与目标元素的底部对齐。
+:::demo 使用 `content` 属性来决定 `hover` 时的提示信息。由 `placement` 属性决定展示效果： `placement`属性值为：`[方向]-[对齐位置]`；四个方向：`top`、`left`、`right`、`bottom`；三种对齐位置：`start`, `end`，默认为空。如 `placement="left-end"`，则提示信息出现在目标元素的左侧，且提示信息的底部与目标元素的底部对齐。
 
 tooltip/basic
 
@@ -51,7 +51,7 @@ tooltip/rich-content
 
 `transition` 属性可以定制显隐的动画效果，默认为`fade-in-linear`。
 
-如果需要关闭 `tooltip` 功能，`disabled` 属性可以满足这个需求， 你只需要将其设置为 `true`。
+如果需要关闭 `tooltip` 功能，`disabled` 属性可以满足这个需求，你只需要将其设置为 `true`。
 
 事实上，Tooltip 是一个基于 [ElPopper](https://github.com/element-plus/element-plus/tree/dev/packages/components/popper) 的扩展，您可以使用 ElPopper 中允许的任何属性。
 
@@ -65,7 +65,7 @@ tooltip/advanced-usage
 
 Tooltip 内不支持 `router-link` 组件，请使用 `vm.$router.push` 代替。
 
-tooltip 内不支持 disabled form 元素，参考 [MDN](https://developer.mozilla.org/en-US/docs/Web/Events/mouseenter)， 请在 disabled form 元素外层添加一层包裹元素。
+tooltip 内不支持 disabled form 元素，参考 [MDN](https://developer.mozilla.org/en-US/docs/Web/Events/mouseenter)，请在 disabled form 元素外层添加一层包裹元素。
 
 :::
 
@@ -75,7 +75,7 @@ tooltip 内不支持 disabled form 元素，参考 [MDN](https://developer.mozil
 
 :::warning
 
-`content` 属性虽然支持传入 HTML 片段，但是在网站上动态渲染任意 HTML 是非常危险的，因为容易导致 [XSS 攻击](https://en.wikipedia.org/wiki/Cross-site_scripting)。 因此在 `raw-content` 打开的情况下，请确保 `content` 的内容是可信的，**永远不要**将用户提交的内容赋值给 `content` 属性。
+`content` 属性虽然支持传入 HTML 片段，但是在网站上动态渲染任意 HTML 是非常危险的，因为容易导致 [XSS 攻击](https://en.wikipedia.org/wiki/Cross-site_scripting)。因此在 `raw-content` 打开的情况下，请确保 `content` 的内容是可信的，**永远不要**将用户提交的内容赋值给 `content` 属性。
 
 :::
 

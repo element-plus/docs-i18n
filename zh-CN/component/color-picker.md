@@ -17,7 +17,7 @@ color-picker/basic
 
 ## 选择透明度
 
-:::demo ColorPicker 支持普通颜色，也支持带 Alpha 通道的颜色，通过`show-alpha`属性即可控制是否支持透明度的选择。 要启用 Alpha 选择，只需添加 `show-alpha` 属性。
+:::demo ColorPicker 支持普通颜色，也支持带 Alpha 通道的颜色，通过`show-alpha`属性即可控制是否支持透明度的选择。要启用 Alpha 选择，只需添加 `show-alpha` 属性。
 
 color-picker/alpha
 

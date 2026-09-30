@@ -31,7 +31,7 @@ time-picker/basic-range
 
 可选择任意的时间范围
 
-:::demo 添加`is-range`属性即可选择时间范围。 同样支持 `arrow-control` 属性。
+:::demo 添加`is-range`属性即可选择时间范围。同样支持 `arrow-control` 属性。
 
 time-picker/range
 
@@ -62,7 +62,7 @@ time-picker/range
 | range-separator              | 选择范围时的分隔符                                                                                                 | ^[string]                                                                                          | '-'                                |
 | format                       | 显示在输入框中的格式                                                                                                | ^[string] 参考 [日期格式](./date-picker.md#date-formats)                                                 | —                                  |
 | default-value                | 可选，选择器打开时默认显示的时间                                                                                          | ^[Date] / ^[array]`[Date, Date]`                                                                   | —                                  |
-| value-format                 | 可选，绑定值的格式。 不指定则绑定值为 Date 对象                                                                               | ^[string] 参考 [日期格式](./date-picker.md#date-formats)                                                 | —                                  |
+| value-format                 | 可选，绑定值的格式。不指定则绑定值为 Date 对象                                                                                | ^[string] 参考 [日期格式](./date-picker.md#date-formats)                                                 | —                                  |
 | id                           | 等价于原生 input `id` 属性                                                                                       | ^[string] / ^[array]`[string, string]`                                                             | —                                  |
 | name                         | 等价于原生 input `name` 属性                                                                                     | ^[string]                                                                                          | ''                                 |
 | aria-label ^(a11y) ^(2.7.2)  | 等价于原生 input `aria-label` 属性                                                                               | ^[string]                                                                                          | —                                  |

@@ -168,7 +168,7 @@ For more configuration options, please refer to the [docs](https://github.com/el
 
 Element Plus 提供了基于 ES Module 的开箱即用的 [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) 功能。
 
-但你需要安装 [unplugin-element-plus](https://github.com/element-plus/unplugin-element-plus) 来导入样式。 配置文档参考 [docs](https://github.com/element-plus/unplugin-element-plus#readme).
+但你需要安装 [unplugin-element-plus](https://github.com/element-plus/unplugin-element-plus) 来导入样式。配置文档参考 [docs](https://github.com/element-plus/unplugin-element-plus#readme).
 
 ```vue [App.vue]
 <template>
@@ -236,4 +236,4 @@ const size = 'small'
 
 ## 开始使用
 
-现在你可以启动项目了。 对于每个组件的用法，请参考单个组件对应的文档。
+现在你可以启动项目了。对于每个组件的用法，请参考单个组件对应的文档。

@@ -11,7 +11,7 @@ lang: zh-CN
 
 悬停在下拉菜单上以展开更多操作。
 
-:::demo 通过组件 `slot` 来设置下拉触发的元素以及需要通过具名 `slot` 为 `dropdown` 来设置下拉菜单。 默认情况下，只需要悬停在触发菜单的元素上即可，无需点击也会显示下拉菜单。
+:::demo 通过组件 `slot` 来设置下拉触发的元素以及需要通过具名 `slot` 为 `dropdown` 来设置下拉菜单。默认情况下，只需要悬停在触发菜单的元素上即可，无需点击也会显示下拉菜单。
 
 dropdown/basic-usage
 
@@ -31,7 +31,7 @@ dropdown/placements
 
 可使用按钮触发下拉菜单。
 
-:::demo 设置 `split-button` 属性来让触发下拉元素呈现为按钮组，左边是功能按钮，右边是触发下拉菜单的按钮，设置为 `true` 即可。 如果你想要在第三和第四个选项之间添加一个分隔符，你只需要为第四个选项添加一个 `divided` 的属性。
+:::demo 设置 `split-button` 属性来让触发下拉元素呈现为按钮组，左边是功能按钮，右边是触发下拉菜单的按钮，设置为 `true` 即可。如果你想要在第三和第四个选项之间添加一个分隔符，你只需要为第四个选项添加一个 `divided` 的属性。
 
 dropdown/triggering-element
 
@@ -41,7 +41,7 @@ dropdown/triggering-element
 
 可以配置点击激活或者悬停激活。
 
-:::demo 将 `trigger` 属性设置为 click 即可， 默认为 `hover`。
+:::demo 将 `trigger` 属性设置为 click 即可，默认为 `hover`。
 
 dropdown/how-to-trigger
 
@@ -119,7 +119,7 @@ dropdown/virtual-trigger
 | show-arrow ^(2.11.3)         | tooltip 的内容是否有箭头                                                                                      | ^[boolean]                                                                                                          | true                                                                       |
 | show-timeout                 | 展开下拉菜单的延时，仅在 trigger 为 hover 时有效                                                                      | ^[number]                                                                                                           | 150                                                                        |
 | hide-timeout                 | 收起下拉菜单的延时（仅在 trigger 为 hover 时有效）                                                                     | ^[number]                                                                                                           | 150                                                                        |
-| role                         | 下拉菜单的 ARIA 属性。 根据具体场景，您可能想要将此更改为“navigation”                                                          | ^[enum]`'dialog' \| 'grid' \| 'group' \| 'listbox' \| 'menu' \| 'navigation' \| 'tooltip' \| 'tree'`         | menu                                                                       |
+| role                         | 下拉菜单的 ARIA 属性。根据具体场景，您可能想要将此更改为“navigation”                                                           | ^[enum]`'dialog' \| 'grid' \| 'group' \| 'listbox' \| 'menu' \| 'navigation' \| 'tooltip' \| 'tree'`         | menu                                                                       |
 | tabindex                     | Dropdown 组件的 [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) | ^[number] / ^[string]                                                                                               | 0                                                                          |
 | popper-class                 | 自定义浮层类名                                                                                               | ^[string] / ^[object]                                                                                               | ''                                                                         |
 | popper-style ^(2.11.5)       | 自定义浮层类名                                                                                               | ^[string] / ^[object]                                                                                               | —                                                                          |
@@ -130,10 +130,10 @@ dropdown/virtual-trigger
 
 ### Dropdown Slots
 
-| 插槽名      | 说明                                                                                          | 子标签           |
-| -------- | ------------------------------------------------------------------------------------------- | ------------- |
-| default  | 下拉菜单的内容。 注意：必须是有效的 html DOM 元素（例如 `<span>、<button>` 等）或 `el-component`，以附加监听触发器 | :::           |
-| dropdown | 下拉列表，通常是 `<el-dropdown-menu>` 组件                                                      | Dropdown-Menu |
+| 插槽名      | 说明                                                                                         | 子标签           |
+| -------- | ------------------------------------------------------------------------------------------ | ------------- |
+| default  | 下拉菜单的内容。注意：必须是有效的 html DOM 元素（例如 `<span>、<button>` 等）或 `el-component`，以附加监听触发器 | :::           |
+| dropdown | 下拉列表，通常是 `<el-dropdown-menu>` 组件                                                     | Dropdown-Menu |
 
 ### Dropdown Events
 

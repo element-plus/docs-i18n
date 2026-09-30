@@ -80,7 +80,7 @@ npm config set registry https://registry.npmmirror.com
 
 直接通过浏览器的 HTML 标签导入 Element Plus，然后就可以使用全局变量 `ElementPlus` 了。
 
-根据不同的 CDN 提供商有不同的引入方式， 我们在这里以 [unpkg](https://unpkg.com) 和 [jsDelivr](https://jsdelivr.com) 举例。 你也可以使用其它的 CDN 供应商。
+根据不同的 CDN 提供商有不同的引入方式，我们在这里以 [unpkg](https://unpkg.com) 和 [jsDelivr](https://jsdelivr.com) 举例。你也可以使用其它的 CDN 供应商。
 
 ::: code-group
 
@@ -113,7 +113,7 @@ npm config set registry https://registry.npmmirror.com
 
 :::tip
 
-我们建议使用 CDN 引入 Element Plus 的用户在链接地址上锁定版本，以免将来 Element Plus 升级时受到非兼容性更新的影响。 锁定版本的方法请查看 [unpkg.com](https://unpkg.com)。
+我们建议使用 CDN 引入 Element Plus 的用户在链接地址上锁定版本，以免将来 Element Plus 升级时受到非兼容性更新的影响。锁定版本的方法请查看 [unpkg.com](https://unpkg.com)。
 
 由于原生的 HTML 解析行为的限制，单个闭合标签可能会导致一些例外情况，所以请使用双封闭标签， [参考](https://vuejs.org/guide/essentials/component-basics.html#in-dom-template-parsing-caveats)
 
@@ -129,7 +129,7 @@ npm config set registry https://registry.npmmirror.com
 
 ## Hello World
 
-通过 CDN 的方式我们可以很容易地使用 Element Plus 写出一个 Hello world 页面。 [在线演示](https://codepen.io/iamkun/pen/YzWMaVr)
+通过 CDN 的方式我们可以很容易地使用 Element Plus 写出一个 Hello world 页面。[在线演示](https://codepen.io/iamkun/pen/YzWMaVr)
 
 <iframe height="469" style="width: 100%;" scrolling="no" title="YzWMaVr" src="https://codepen.io/iamkun/embed/YzWMaVr?height=469&theme-id=light&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/iamkun/pen/YzWMaVr'>YzWMaVr</a> by iamkun

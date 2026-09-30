@@ -21,7 +21,7 @@ badge/basic
 
 你还可以自定义最大值
 
-::: demo 由 max 属性定义，接受 Number 值。 请注意，仅在值也是 Number 时起作用。
+::: demo 由 max 属性定义，接受 Number 值。请注意，仅在值也是 Number 时起作用。
 
 badge/max
 
@@ -29,9 +29,9 @@ badge/max
 
 ## 自定义显示内容
 
-你也可以展示除数字以外你想要展示的任何值。 或者您可以使用 `content` 栏位自定义内容。
+你也可以展示除数字以外你想要展示的任何值。或者您可以使用 `content` 栏位自定义内容。
 
-:::demo 当 value 是 String 时，可以显示自定义文字。 或者使用 `content` 插槽。
+:::demo 当 value 是 String 时，可以显示自定义文字。或者使用 `content` 插槽。
 
 badge/customize
 
@@ -41,7 +41,7 @@ badge/customize
 
 通过一个小红点标记来告知用户有新内容。
 
-:::demo 使用 `is-dot` 属性。 是个布尔值。
+:::demo 使用 `is-dot` 属性。是个布尔值。
 
 badge/dot
 
@@ -59,18 +59,18 @@ badge/offset
 
 ### Attributes
 
-| 属性名                  | 说明                                          | 类型                                                                     | 默认值    |
-| -------------------- | ------------------------------------------- | ---------------------------------------------------------------------- | ------ |
-| value                | 显示值                                         | ^[string] / ^[number]                                                  | ''     |
-| max                  | 最大值，超过最大值会显示 `{max}+`。 只有当 value 是数字类型时起作用。 | ^[number]                                                              | 99     |
-| is-dot               | 是否显示小圆点。                                    | ^[boolean]                                                             | false  |
-| hidden               | 是否隐藏 Badge。                                 | ^[boolean]                                                             | false  |
-| type                 | badge 类型。                                   | ^[enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | danger |
-| show-zero ^(2.6.0)   | 值为零时是否显示 Badge                              | ^[boolean]                                                             | true   |
-| color ^(2.6.3)       | 背景色                                         | ^[string]                                                              |        |
-| offset ^(2.7.0)      | badge 的偏移量                                  | ^[array]`[number, number]`                                             | [0, 0] |
-| badge-style ^(2.7.1) | 自定义 badge 样式                                | ^[object]`CSSProperties`                                               | —      |
-| badge-class ^(2.7.1) | 自定义 badge 类名                                | ^[string]                                                              | —      |
+| 属性名                  | 说明                                         | 类型                                                                     | 默认值    |
+| -------------------- | ------------------------------------------ | ---------------------------------------------------------------------- | ------ |
+| value                | 显示值                                        | ^[string] / ^[number]                                                  | ''     |
+| max                  | 最大值，超过最大值会显示 `{max}+`。只有当 value 是数字类型时起作用。 | ^[number]                                                              | 99     |
+| is-dot               | 是否显示小圆点。                                   | ^[boolean]                                                             | false  |
+| hidden               | 是否隐藏 Badge。                                | ^[boolean]                                                             | false  |
+| type                 | badge 类型。                                  | ^[enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | danger |
+| show-zero ^(2.6.0)   | 值为零时是否显示 Badge                             | ^[boolean]                                                             | true   |
+| color ^(2.6.3)       | 背景色                                        | ^[string]                                                              |        |
+| offset ^(2.7.0)      | badge 的偏移量                                 | ^[array]`[number, number]`                                             | [0, 0] |
+| badge-style ^(2.7.1) | 自定义 badge 样式                               | ^[object]`CSSProperties`                                               | —      |
+| badge-class ^(2.7.1) | 自定义 badge 类名                               | ^[string]                                                              | —      |
 
 ### Slots
 

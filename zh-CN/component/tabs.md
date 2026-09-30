@@ -11,7 +11,7 @@ lang: zh-CN
 
 基础的、简洁的标签页。
 
-:::demo Tabs 组件提供了选项卡功能， 默认选中第一个标签页，你也可以通过 `value` 属性来指定当前选中的标签页。
+:::demo Tabs 组件提供了选项卡功能，默认选中第一个标签页，你也可以通过 `value` 属性来指定当前选中的标签页。
 
 tabs/basic
 
@@ -95,18 +95,18 @@ tabs/default-value
 
 ### Tabs Attributes
 
-| 属性名                     | 说明                                                          | 类型                                                                                                         | Default    |
-| ----------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------- |
-| model-value / v-model   | 绑定值，选中选项卡的 name，默认值是第一个 tab 的 name                          | ^[string] / ^[number]                                                                                      | —          |
-| default-value ^(2.11.9) | 在初始渲染时处于激活状态的标签的值。 （避免初始化时变动）                               | ^[string] / ^[number]                                                                                      |            |
-| type                    | 风格类型                                                        | ^[enum]`'' \| 'card' \| 'border-card'`                                                                   | ''         |
-| closable                | 标签是否可关闭                                                     | ^[boolean]                                                                                                 | false      |
-| addable                 | 标签是否可增加                                                     | ^[boolean]                                                                                                 | false      |
-| editable                | 标签是否同时可增加和关闭                                                | ^[boolean]                                                                                                 | false      |
-| tab-position            | 选项卡所在位置                                                     | ^[enum]`'top' \| 'right' \| 'bottom' \| 'left'`                                                         | top        |
-| stretch                 | 标签的宽度是否自撑开                                                  | ^[boolean]                                                                                                 | false      |
-| before-leave            | 切换标签之前的钩子函数， 若返回 `false ` 或者返回被 reject 的 ` Promise `，则阻止切换。 | ^[Function]`(activeName: TabPaneName, oldActiveName: TabPaneName) => Awaitable<void \| boolean>` | () => true |
-| tabindex ^(2.11.7)      | tabs 的 tabindex                                             | ^[string] / ^[number]                                                                                      | 0          |
+| 属性名                     | 说明                                                         | 类型                                                                                                         | Default    |
+| ----------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------- |
+| model-value / v-model   | 绑定值，选中选项卡的 name，默认值是第一个 tab 的 name                         | ^[string] / ^[number]                                                                                      | —          |
+| default-value ^(2.11.9) | 在初始渲染时处于激活状态的标签的值。（避免初始化时变动）                               | ^[string] / ^[number]                                                                                      |            |
+| type                    | 风格类型                                                       | ^[enum]`'' \| 'card' \| 'border-card'`                                                                   | ''         |
+| closable                | 标签是否可关闭                                                    | ^[boolean]                                                                                                 | false      |
+| addable                 | 标签是否可增加                                                    | ^[boolean]                                                                                                 | false      |
+| editable                | 标签是否同时可增加和关闭                                               | ^[boolean]                                                                                                 | false      |
+| tab-position            | 选项卡所在位置                                                    | ^[enum]`'top' \| 'right' \| 'bottom' \| 'left'`                                                         | top        |
+| stretch                 | 标签的宽度是否自撑开                                                 | ^[boolean]                                                                                                 | false      |
+| before-leave            | 切换标签之前的钩子函数，若返回 `false ` 或者返回被 reject 的 ` Promise `，则阻止切换。 | ^[Function]`(activeName: TabPaneName, oldActiveName: TabPaneName) => Awaitable<void \| boolean>` | () => true |
+| tabindex ^(2.11.7)      | tabs 的 tabindex                                            | ^[string] / ^[number]                                                                                      | 0          |
 
 ### Tabs Events
 
@@ -176,4 +176,4 @@ tabs/default-value
 
 #### 如何使用可排序/可拖动的 tabs？
 
-我们已对外暴露了实现该功能所需的必要能力。 您可以查看 [示例](https://tinyurl.com/2jkyw82j) 来用原生的方式实现。 或使用 [SortableJs](https://github.com/SortableJS/Sortable), [示例](https://tinyurl.com/2r8js24y)。
+我们已对外暴露了实现该功能所需的必要能力。您可以查看 [示例](https://tinyurl.com/2jkyw82j) 来用原生的方式实现。或使用 [SortableJs](https://github.com/SortableJS/Sortable), [示例](https://tinyurl.com/2r8js24y)。

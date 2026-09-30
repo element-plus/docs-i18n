@@ -41,7 +41,7 @@ scrollbar/manual-scroll
 
 ## 无限滚动^(2.10.0)
 
-:::demo `end-reached` 是在滚动条到达底部时触发的。 它可以用作无限滚动。
+:::demo `end-reached` 是在滚动条到达底部时触发的。它可以用作无限滚动。
 
 scrollbar/infinite-scroll
 

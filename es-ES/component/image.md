@@ -118,11 +118,12 @@ image/custom-progress
 
 ### Image Slots
 
-| Nombre                                    | Descripción                                                           | Tipo |
-| ----------------------------------------- | --------------------------------------------------------------------- | ---- |
-| placeholder                               | contenido personalizado cuando la imagen no se ha cargado todavía.    | -    |
-| error                                     | contenido personalizado cuando la carga de imagen falle.              | -    |
-| [image viewer slots](#image-viewer-slots) | when you allow big image preview, image viewer slots all can be used. | -    |
+| Nombre                                    | Descripción                                                                             | Tipo |
+| ----------------------------------------- | --------------------------------------------------------------------------------------- | ---- |
+| placeholder                               | contenido personalizado cuando la imagen no se ha cargado todavía.                      | -    |
+| error                                     | contenido personalizado cuando la carga de imagen falle.                                | -    |
+| viewer                                    | custom content when image preview.                                                      | -    |
+| [image viewer slots](#image-viewer-slots) | when you allow big image preview, image viewer slots all can be used, except `default`. | -    |
 
 ### Image Exposes
 
@@ -162,7 +163,7 @@ image/custom-progress
 
 | Name                   | Description                                                            | Type                                                                                                                                                                                                                               |
 | ---------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| viewer                 | custom content                                                         | -                                                                                                                                                                                                                                  |
+| default                | custom content                                                         | -                                                                                                                                                                                                                                  |
 | progress ^(2.9.4)      | custom progress content (Priority is higher than `show-progress` prop) | ^[object]`{ activeIndex: number, total: number }`                                                                                                                                                                                  |
 | toolbar ^(2.9.4)       | custom toolbar content                                                 | ^[object]`{ actions: (action: ImageViewerAction, options?: ImageViewerActionOptions) => void, prev: () => void, next: () => void, reset: () => void, activeIndex: number, setActiveItem: (index: number) => void }` |
 | viewer-error ^(2.11.3) | contenido personalizado cuando la carga de imagen falle.               | ^[object]`{ activeIndex: number, src: string }`                                                                                                                                                                                    |

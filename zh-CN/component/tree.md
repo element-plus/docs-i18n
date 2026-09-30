@@ -35,7 +35,7 @@ tree/selectable
 
 ## 懒加载自定义叶子节点
 
-:::demo 由于在点击节点时才进行该层数据的获取，默认情况下 Tree 无法预知某个节点是否为叶子节点， 所以会为每个节点添加一个下拉按钮，如果节点没有下层数据，则点击后下拉按钮会消失。 同时，你也可以提前告知 Tree 某个节点是否为叶子节点，从而避免在叶子节点前渲染下拉按钮。
+:::demo 由于在点击节点时才进行该层数据的获取，默认情况下 Tree 无法预知某个节点是否为叶子节点，所以会为每个节点添加一个下拉按钮，如果节点没有下层数据，则点击后下拉按钮会消失。同时，你也可以提前告知 Tree 某个节点是否为叶子节点，从而避免在叶子节点前渲染下拉按钮。
 
 tree/custom-leaf
 
@@ -43,7 +43,7 @@ tree/custom-leaf
 
 ## 多次懒加载 ^(2.6.3)
 
-:::demo 加载远程节点数据时，懒加载有时可能失败。 在这种情况下，您可以调用 reject 以保持节点状态，并允许远程加载继续。
+:::demo 加载远程节点数据时，懒加载有时可能失败。在这种情况下，您可以调用 reject 以保持节点状态，并允许远程加载继续。
 
 tree/multiple-times-load
 
@@ -53,7 +53,7 @@ tree/multiple-times-load
 
 节点的复选框可以设置为禁用。
 
-:::demo 在示例中，通过 disabled 设置禁用状态。 相应的复选框已禁用，不能点击。
+:::demo 在示例中，通过 disabled 设置禁用状态。相应的复选框已禁用，不能点击。
 
 tree/disabled
 
@@ -63,7 +63,7 @@ tree/disabled
 
 树节点可以在初始化阶段被设置为展开和选中。
 
-:::demo 分别通过 `default-expanded-keys` 和 `default-checked-keys` 设置默认展开和默认选中的节点。 需要注意的是，此时必须设置 `node-key`， 其值为节点数据中的一个字段名，该字段在整棵树中是唯一的。
+:::demo 分别通过 `default-expanded-keys` 和 `default-checked-keys` 设置默认展开和默认选中的节点。需要注意的是，此时必须设置 `node-key`，其值为节点数据中的一个字段名，该字段在整棵树中是唯一的。
 
 tree/default-state
 
@@ -71,7 +71,7 @@ tree/default-state
 
 ## 树节点的选择
 
-:::demo 本例展示如何获取和设置选中节点。 获取和设置各有两种方式：通过 node 或通过 key。 如果需要通过 key 来获取或设置，则必须设置 `node-key`。
+:::demo 本例展示如何获取和设置选中节点。获取和设置各有两种方式：通过 node 或通过 key。如果需要通过 key 来获取或设置，则必须设置 `node-key`。
 
 tree/checking-tree
 
@@ -81,7 +81,7 @@ tree/checking-tree
 
 节点的内容支持自定义，可以在节点区添加按钮或图标等内容
 
-:::demo 可以通过两种方法进行树节点内容的自定义：`render-content` 和 scoped slot。 使用 `render-content` 指定渲染函数，该函数返回需要的节点区内容即可。 渲染函数的用法请参考 Vue 文档。 使用 scoped slot 会传入两个参数 `node` 和 `data`，分别表示当前节点的 Node 对象和当前节点的数据。 注意：由于 JSFiddle 不支持 JSX 语法，所以 `render-content` 示例无法在那里运行。 但是在实际的项目中，只要正确地配置了相关依赖，就可以正常运行。
+:::demo 可以通过两种方法进行树节点内容的自定义：`render-content` 和 scoped slot。使用 `render-content` 指定渲染函数，该函数返回需要的节点区内容即可。渲染函数的用法请参考 Vue 文档。使用 scoped slot 会传入两个参数 `node` 和 `data`，分别表示当前节点的 Node 对象和当前节点的数据。注意：由于 JSFiddle 不支持 JSX 语法，所以 `render-content` 示例无法在那里运行。但是在实际的项目中，只要正确地配置了相关依赖，就可以正常运行。
 
 tree/customized-node
 
@@ -101,7 +101,7 @@ tree/custom-node-class
 
 树节点是可以被过滤的
 
-:::demo 调用 Tree 实例对象的 `filter` 方法来过滤树节点。 方法的参数就是过滤关键字。 需要注意的是，此时需要设置 `filter-node-method` 属性，其值为过滤函数。
+:::demo 调用 Tree 实例对象的 `filter` 方法来过滤树节点。方法的参数就是过滤关键字。需要注意的是，此时需要设置 `filter-node-method` 属性，其值为过滤函数。
 
 tree/filtering
 
@@ -131,34 +131,34 @@ tree/draggable
 
 ### 属性
 
-| 属性名                          | 说明                                                                                                                      | 类型                                                        | 默认值   |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ----- |
-| data                         | 展示数据                                                                                                                    | ^[array]`Array<{[key: string]: any}>`               | —     |
-| empty-text                   | 内容为空的时候展示的文本                                                                                                            | ^[string]                                                 | —     |
-| node-key                     | 每个树节点用来作为唯一标识的属性，整棵树应该是唯一的                                                                                              | ^[string]                                                 | —     |
-| [props](#props)              | 配置选项，具体看下表                                                                                                              | ^[object]                                                 | —     |
-| render-after-expand          | 是否在第一次展开某个树节点后才渲染其子节点                                                                                                   | ^[boolean]                                                | true  |
-| load                         | 加载子树数据的方法，仅当 lazy 属性为true 时生效                                                                                           | ^[Function]`(node, resolve, reject) => void`           | —     |
-| render-content               | 树节点的内容区的渲染 Function                                                                                                     | ^[Function]`(h, { node, data, store }) => void`        | —     |
-| highlight-current            | 是否高亮当前选中节点，默认值是 false。                                                                                                  | ^[boolean]                                                | false |
-| default-expand-all           | 是否默认展开所有节点                                                                                                              | ^[boolean]                                                | false |
-| expand-on-click-node         | 是否在点击节点的时候展开或者收缩节点， 默认值为 true，如果为 false，则只有点箭头图标的时候才会展开或者收缩节点。                                                          | ^[boolean]                                                | true  |
-| check-on-click-node          | 是否在点击节点的时候选中节点，默认值为 false，即只有在点击复选框时才会选中节点。                                                                             | ^[boolean]                                                | false |
-| check-on-click-leaf ^(2.9.6) | 点击叶节点(最后一个子节点)时是否选中或取消选中节点。                                                                                             | ^[boolean]                                                | true  |
-| auto-expand-parent           | 展开子节点的时候是否自动展开父节点                                                                                                       | ^[boolean]                                                | true  |
-| default-expanded-keys        | 默认展开的节点的 key 的数组                                                                                                        | ^[array]`Array<string \| number>`                  | —     |
-| show-checkbox                | 节点是否可被选择                                                                                                                | ^[boolean]                                                | false |
-| check-strictly               | 在显示复选框的情况下，是否严格的遵循父子不互相关联的做法，默认为 false                                                                                  | ^[boolean]                                                | false |
-| default-checked-keys         | 默认勾选的节点的 key 的数组                                                                                                        | ^[array]`Array<string \| number>`                  | —     |
-| current-node-key             | 当前选中的节点                                                                                                                 | ^[string] / ^[number]                                     | —     |
-| filter-node-method           | 对树节点进行筛选时执行的方法， 返回 `false` 则表示这个节点会被隐藏                                                                                  | ^[Function]`(value, data, node) => boolean`            | —     |
-| accordion                    | 是否每次只打开一个同级树节点展开                                                                                                        | ^[boolean]                                                | false |
-| indent                       | 相邻级节点间的水平缩进，单位为像素                                                                                                       | ^[number]                                                 | 18    |
-| icon                         | 自定义树节点图标组件                                                                                                              | ^[string] / ^[Component]                                  | —     |
-| lazy                         | 是否懒加载子节点，需与 load 方法结合使用                                                                                                 | ^[boolean]                                                | false |
-| draggable                    | 是否开启拖拽节点功能                                                                                                              | ^[boolean]                                                | false |
-| allow-drag                   | 判断节点能否被拖拽 如果返回 `false` ，节点不能被拖动                                                                                         | ^[Function]`(node) => boolean`                         | —     |
-| allow-drop                   | 拖拽时判定目标节点能否成为拖动目标位置。 如果返回 `false` ，拖动节点不能被拖放到目标节点。 `type` 参数有三种情况：'prev'、'inner' 和 'next'，分别表示放置在目标节点前、插入至目标节点和放置在目标节点后 | ^[Function]`(draggingNode, dropNode, type) => boolean` | —     |
+| 属性名                          | 说明                                                                                                                     | 类型                                                        | 默认值   |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ----- |
+| data                         | 展示数据                                                                                                                   | ^[array]`Array<{[key: string]: any}>`               | —     |
+| empty-text                   | 内容为空的时候展示的文本                                                                                                           | ^[string]                                                 | —     |
+| node-key                     | 每个树节点用来作为唯一标识的属性，整棵树应该是唯一的                                                                                             | ^[string]                                                 | —     |
+| [props](#props)              | 配置选项，具体看下表                                                                                                             | ^[object]                                                 | —     |
+| render-after-expand          | 是否在第一次展开某个树节点后才渲染其子节点                                                                                                  | ^[boolean]                                                | true  |
+| load                         | 加载子树数据的方法，仅当 lazy 属性为true 时生效                                                                                          | ^[Function]`(node, resolve, reject) => void`           | —     |
+| render-content               | 树节点的内容区的渲染 Function                                                                                                    | ^[Function]`(h, { node, data, store }) => void`        | —     |
+| highlight-current            | 是否高亮当前选中节点，默认值是 false。                                                                                                 | ^[boolean]                                                | false |
+| default-expand-all           | 是否默认展开所有节点                                                                                                             | ^[boolean]                                                | false |
+| expand-on-click-node         | 是否在点击节点的时候展开或者收缩节点， 默认值为 true，如果为 false，则只有点箭头图标的时候才会展开或者收缩节点。                                                         | ^[boolean]                                                | true  |
+| check-on-click-node          | 是否在点击节点的时候选中节点，默认值为 false，即只有在点击复选框时才会选中节点。                                                                            | ^[boolean]                                                | false |
+| check-on-click-leaf ^(2.9.6) | 点击叶节点(最后一个子节点)时是否选中或取消选中节点。                                                                                            | ^[boolean]                                                | true  |
+| auto-expand-parent           | 展开子节点的时候是否自动展开父节点                                                                                                      | ^[boolean]                                                | true  |
+| default-expanded-keys        | 默认展开的节点的 key 的数组                                                                                                       | ^[array]`Array<string \| number>`                  | —     |
+| show-checkbox                | 节点是否可被选择                                                                                                               | ^[boolean]                                                | false |
+| check-strictly               | 在显示复选框的情况下，是否严格的遵循父子不互相关联的做法，默认为 false                                                                                 | ^[boolean]                                                | false |
+| default-checked-keys         | 默认勾选的节点的 key 的数组                                                                                                       | ^[array]`Array<string \| number>`                  | —     |
+| current-node-key             | 当前选中的节点                                                                                                                | ^[string] / ^[number]                                     | —     |
+| filter-node-method           | 对树节点进行筛选时执行的方法，返回 `false` 则表示这个节点会被隐藏                                                                                  | ^[Function]`(value, data, node) => boolean`            | —     |
+| accordion                    | 是否每次只打开一个同级树节点展开                                                                                                       | ^[boolean]                                                | false |
+| indent                       | 相邻级节点间的水平缩进，单位为像素                                                                                                      | ^[number]                                                 | 18    |
+| icon                         | 自定义树节点图标组件                                                                                                             | ^[string] / ^[Component]                                  | —     |
+| lazy                         | 是否懒加载子节点，需与 load 方法结合使用                                                                                                | ^[boolean]                                                | false |
+| draggable                    | 是否开启拖拽节点功能                                                                                                             | ^[boolean]                                                | false |
+| allow-drag                   | 判断节点能否被拖拽如果返回 `false` ，节点不能被拖动                                                                                         | ^[Function]`(node) => boolean`                         | —     |
+| allow-drop                   | 拖拽时判定目标节点能否成为拖动目标位置。如果返回 `false` ，拖动节点不能被拖放到目标节点。 `type` 参数有三种情况：'prev'、'inner' 和 'next'，分别表示放置在目标节点前、插入至目标节点和放置在目标节点后 | ^[Function]`(draggingNode, dropNode, type) => boolean` | —     |
 
 ### Props
 
@@ -179,15 +179,15 @@ tree/draggable
 | filter              | 过滤所有树节点，过滤后的节点将被隐藏                                        | 接收一个参数并指定为 filter-node-method 属性的第一个参数                                                                                                                  |
 | updateKeyChildren   | 为节点设置新数据，只有当设置 `node-key` 属性的时候才可用                        | (key, data) 接收两个参数: 1. 节点的 key 2. 新数据                                                                                                                   |
 | getCheckedNodes     | 如果节点可以被选中，(`show-checkbox` 为 `true`), 本方法将返回当前选中节点的数组     | (leafOnly, includeHalfChecked) 接收两个布尔类型参数: 1. 默认值为 `false`. 若参数为 `true`, 它将返回当前选中节点的子节点 2. 默认值为 `false`. 如果参数为 `true`, 返回值包含半选中节点数据                     |
-| setCheckedNodes     | 设置目前选中的节点，使用此方法必须设置 `node-key` 属性                         | (nodes, leafOnly) 接收两个参数: 1. 要选中的节点对象构成的数组 2. 布尔类型的值 如果设置为 `true`，将只设置选中的叶子节点状态。 默认值是 `false`.                                                          |
+| setCheckedNodes     | 设置目前选中的节点，使用此方法必须设置 `node-key` 属性                         | (nodes, leafOnly) 接收两个参数: 1. 要选中的节点对象构成的数组 2. 布尔类型的值如果设置为 `true`，将只设置选中的叶子节点状态。默认值是 `false`.                                                            |
 | getCheckedKeys      | 若节点可用被选中 (`show-checkbox` 为 `true`), 它将返回当前选中节点 key 的数组   | (leafOnly) 接收一个布尔类型参数，默认为 `false`. 若参数为 `true`, 它将返回当前选中节点的子节点                                                                                          |
-| setCheckedKeys      | 设置目前选中的节点，使用此方法必须设置 `node-key` 属性                         | (keys, leafOnly) 接收两个参数: 1. 一个需要被选中的多节点 key 的数组 2. 布尔类型的值 如果设置为 `true`，将只设置选中的叶子节点状态。 默认值是 `false`.                                                     |
+| setCheckedKeys      | 设置目前选中的节点，使用此方法必须设置 `node-key` 属性                         | (keys, leafOnly) 接收两个参数: 1. 一个需要被选中的多节点 key 的数组 2. 布尔类型的值如果设置为 `true`，将只设置选中的叶子节点状态。默认值是 `false`.                                                       |
 | setChecked          | 设置节点是否被选中, 使用此方法必须设置 `node-key` 属性                        | (key/data, checked, deep) 接收三个参数: 1. 要选中的节点的 key 或者数据 2. 一个布尔类型参数表明是否选中. 3. 一个布尔类型参数，用于指示是否递归选中/取消选中子节点（自 ^(2.14.0) 起，无论 `check-strictly` 设置如何，该行为均有效）。 |
 | getHalfCheckedNodes | 如果节点可用被选中 (`show-checkbox` 为 `true`), 它将返回当前半选中的节点组成的数组   | —                                                                                                                                                       |
 | getHalfCheckedKeys  | 若节点可被选中(`show-checkbox` 为 `true`)，则返回目前半选中的节点的 key 所组成的数组 | —                                                                                                                                                       |
 | getCurrentKey       | 返回当前被选中节点的数据 (如果没有则返回 null)                               | —                                                                                                                                                       |
 | getCurrentNode      | 返回当前被选中节点的数据 (如果没有则返回 null)                               | —                                                                                                                                                       |
-| setCurrentKey       | 通过 key 设置某个节点的当前选中状态，使用此方法必须设置 `node-key ` 属性             | (key, shouldAutoExpandParent=true) 1. 待被选节点的 key， 如果为 `null`, 取消当前选中的节点 2. 是否展开父节点                                                                      |
+| setCurrentKey       | 通过 key 设置某个节点的当前选中状态，使用此方法必须设置 `node-key ` 属性             | (key, shouldAutoExpandParent=true) 1. 待被选节点的 key，如果为 `null`, 取消当前选中的节点 2. 是否展开父节点                                                                       |
 | setCurrentNode      | 设置节点为选中状态，使用此方法必须设置 `node-key `属性                         | (node, shouldAutoExpandParent=true) 1. 待被选中的节点 2. 是否展开父节点                                                                                               |
 | getNode             | 根据 data 或者 key 拿到 Tree 组件中的 node                          | (data) 节点的 data 或 key                                                                                                                                   |
 | remove              | 删除 Tree 中的一个节点，使用此方法必须设置 node-key 属性                      | (data) 要删除的节点的 data 或者 node 对象                                                                                                                          |

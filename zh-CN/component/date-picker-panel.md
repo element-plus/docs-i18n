@@ -19,8 +19,7 @@ date-picker-panel/basic
 
 ## 边框
 
-默认情况下，边框是默认的，如果你不想要边框请参考示例。
-例如，`DatePicker`不继承`border`。
+默认情况下，边框是默认的，如果你不想要边框请参考示例。例如，`DatePicker`不继承`border`。
 
 :::demo
 
@@ -52,7 +51,7 @@ date-picker-panel/all-types
 
 由于 Element Plus 的默认语言为英语，如果你需要设置其它的语言，请参考<a href="/zh-CN/guide/i18n">国际化</a>文档。
 
-要注意的是：日期相关的文字（月份，每一周的第一天等等） 也都进行了本地化配置。
+要注意的是：日期相关的文字（月份，每一周的第一天等等）也都进行了本地化配置。
 
 ## 应用开发接口（API）
 
@@ -68,12 +67,12 @@ date-picker-panel/all-types
 | type                                                                      | type of the picker. `quarter`, `quarters`, and `quarterrange` are supported since ^(2.14.5)                                 | ^[enum]`'year' \| 'years' \|'month' \| 'months' \| 'date' \| 'dates' \| 'datetime' \| 'week' \| 'quarter' \| 'quarters' \| 'datetimerange' \| 'daterange' \| 'monthrange' \| 'yearrange' \| 'quarterrange'`                            | date                                                   |
 | default-value                                                             | 可选，选择器打开时默认显示的时间                                                                                                                                                                               | ^[object]`Date \| [Date, Date]`                                                                                                                                                                                                        | —                                                      |
 | default-time                                                              | 范围选择时选中日期所使用的当日内具体时刻                                                                                                                                                                           | ^[object]`Date \| [Date, Date]`                                                                                                                                                                                                        | —                                                      |
-| value-format                                                              | 可选，绑定值的格式。 不指定则绑定值为 Date 对象                                                                                                                                                                    | ^[string]                                                                                                                                                                                                                              | —                                                      |
+| value-format                                                              | 可选，绑定值的格式。不指定则绑定值为 Date 对象                                                                                                                                                                     | ^[string]                                                                                                                                                                                                                              | —                                                      |
 | date-format                                                               | 可选，输入框内部面板中显示的日期格式                                                                                                                                                                             | ^[string] see [date formats](https://day.js.org/docs/en/display/format)                                                                                                                                                                | YYYY-MM-DD                                             |
 | time-format                                                               | 可选，输入框内部面板中显示的时间格式                                                                                                                                                                             | ^[string] see [date formats](https://day.js.org/docs/en/display/format)                                                                                                                                                                | HH:mm:ss               |
 | unlink-panels                                                             | 在范围选择器里取消两个日期面板之间的联动                                                                                                                                                                           | ^[boolean]                                                                                                                                                                                                                             | false                                                  |
 | single-panel ^(2.14.0) | 在范围选择器中只显示一个面板                                                                                                                                                                                 | ^[boolean]                                                                                                                                                                                                                             | false                                                  |
-| disabled-date                                                             | 一个用来判断该日期是否被禁用的函数，接受一个 Date 对象作为参数。 应该返回一个 Boolean 值。                                                                                                                                          | ^[Function]`(data: Date) => boolean`                                                                                                                                                                                                   | —                                                      |
+| disabled-date                                                             | 一个用来判断该日期是否被禁用的函数，接受一个 Date 对象作为参数。应该返回一个 Boolean 值。                                                                                                                                           | ^[Function]`(data: Date) => boolean`                                                                                                                                                                                                   | —                                                      |
 | shortcuts                                                                 | 设置快捷选项，需要传入数组对象                                                                                                                                                                                | ^[array]`Array<{ text: string, value: Date \| Function }>`                                                                                                                                                                             | [] |
 | cell-class-name                                                           | 设置自定义类名                                                                                                                                                                                        | ^[Function]`(data: Date) => string`                                                                                                                                                                                                    | —                                                      |
 | show-footer                                                               | whether to show footer where the date picker is one ^[enum]`'dates' \| 'months' \| 'years' \| 'quarters' \| 'datetime' \| 'datetimerange'` | ^[boolean]                                                                                                                                                                                                                             | false                                                  |
@@ -82,11 +81,11 @@ date-picker-panel/all-types
 
 ### Events
 
-| 名称                                                                 | 详情                        | 类型                                                                                                                                            |
-| ------------------------------------------------------------------ | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| calendar-change                                                    | 在日历所选日期更改时触发 仅限“range”类型。 | ^[Function]`(val: [Date, null \| Date]) => void`                                          |
-| panel-change                                                       | 当日期面板改变时触发。               | ^[Function]`(date: Date \| [Date, Date], mode: 'month' \| 'year', view?: string) => void` |
-| clear ^(2.13.1) | 当点击清除按钮时触发                | ^[Function]`() => void`                                                                   |
+| 名称                                                                 | 详情                       | 类型                                                                                                                                            |
+| ------------------------------------------------------------------ | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| calendar-change                                                    | 在日历所选日期更改时触发仅限“range”类型。 | ^[Function]`(val: [Date, null \| Date]) => void`                                          |
+| panel-change                                                       | 当日期面板改变时触发。              | ^[Function]`(date: Date \| [Date, Date], mode: 'month' \| 'year', view?: string) => void` |
+| clear ^(2.13.1) | 当点击清除按钮时触发               | ^[Function]`() => void`                                                                   |
 
 ### 插槽
 

@@ -9,7 +9,7 @@ lang: zh-CN
 
 ## 基础用法
 
-:::demo 设置 `value` 来指定当前显示的月份。 如果 `value` 未指定，则显示当月。 `value` 支持 `v-model` 双向绑定。
+:::demo 设置 `value` 来指定当前显示的月份。如果 `value` 未指定，则显示当月。 `value` 支持 `v-model` 双向绑定。
 
 calendar/basic
 
@@ -17,7 +17,7 @@ calendar/basic
 
 ## 控制器类型 ^(2.13.1)
 
-:::demo 您可以设置日历头部的控制器类型。 设置 `select`时，您可以使用 `formatter` 自定义 `label`。
+:::demo 您可以设置日历头部的控制器类型。设置 `select`时，您可以使用 `formatter` 自定义 `label`。
 
 calendar/controller-type
 
@@ -25,7 +25,7 @@ calendar/controller-type
 
 ## 自定义内容
 
-:::demo 通过设置名为 `date-cell` 的 `scoped-slot` 来自定义日历单元格中显示的内容。 在 `scoped-slot` 可以获取到 date（当前单元格的日期）, data（包括 type，isSelected，day 属性）。 详情解释参考下方的 API 文档。
+:::demo 通过设置名为 `date-cell` 的 `scoped-slot` 来自定义日历单元格中显示的内容。在 `scoped-slot` 可以获取到 date（当前单元格的日期）, data（包括 type，isSelected，day 属性）。详情解释参考下方的 API 文档。
 
 calendar/customize
 
@@ -33,7 +33,7 @@ calendar/customize
 
 ## 范围
 
-:::demo 设置 `range` 属性指定日历的显示范围。 开始时间必须是周起始日，结束时间必须是周结束日，且时间跨度不能超过两个月。
+:::demo 设置 `range` 属性指定日历的显示范围。开始时间必须是周起始日，结束时间必须是周结束日，且时间跨度不能超过两个月。
 
 calendar/range
 
@@ -57,12 +57,12 @@ calendar/header
 
 ### Attributes
 
-| 属性名                       | 说明                                                      | 类型                                                                             | 默认值    |
-| ------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ | ------ |
-| model-value / v-model     | 选中项绑定值                                                  | ^[Date]                                                                        | —      |
-| range                     | 时间范围，包括开始时间与结束时间。 开始时间必须是周起始日，结束时间必须是周结束日，且时间跨度不能超过两个月。 | ^[array]`[Date, Date]`                                                         | —      |
-| controller-type ^(2.13.1) | 日历头部的控制器类型                                              | ^[enum]`'button' \| 'select'`                                                 | button |
-| formatter ^(2.13.1)       | 当 `controller-type` 为“select”时的格式标签                     | ^[Function]`(value: number, type: 'year' \| 'month') => string \| number` | —      |
+| 属性名                       | 说明                                                     | 类型                                                                             | 默认值    |
+| ------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------ | ------ |
+| model-value / v-model     | 选中项绑定值                                                 | ^[Date]                                                                        | —      |
+| range                     | 时间范围，包括开始时间与结束时间。开始时间必须是周起始日，结束时间必须是周结束日，且时间跨度不能超过两个月。 | ^[array]`[Date, Date]`                                                         | —      |
+| controller-type ^(2.13.1) | 日历头部的控制器类型                                             | ^[enum]`'button' \| 'select'`                                                 | button |
+| formatter ^(2.13.1)       | 当 `controller-type` 为“select”时的格式标签                    | ^[Function]`(value: number, type: 'year' \| 'month') => string \| number` | —      |
 
 ### Slots
 

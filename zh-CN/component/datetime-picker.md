@@ -9,13 +9,13 @@ lang: zh-CN
 
 :::tip
 
-日期时间选择器来自日期选择器和时间选择器的组合。 关于属性的更详细解释，请参阅日期选择器和时间选择器。
+日期时间选择器来自日期选择器和时间选择器的组合。关于属性的更详细解释，请参阅日期选择器和时间选择器。
 
 :::
 
 ## 日期和时间点
 
-:::demo 通过设置`type`属性为`datetime`，即可在同一个选择器里同时进行日期和时间的选择。 快捷方式的使用方法与 Date Picker 相同。
+:::demo 通过设置`type`属性为`datetime`，即可在同一个选择器里同时进行日期和时间的选择。快捷方式的使用方法与 Date Picker 相同。
 
 datetime-picker/date-and-time
 
@@ -23,7 +23,7 @@ datetime-picker/date-and-time
 
 ## 日期时间格式
 
-使用`format`指定输入框的格式。 使用`value-format`指定绑定值的格式。
+使用`format`指定输入框的格式。使用`value-format`指定绑定值的格式。
 
 默认情况下，组件接受并返回`Date`对象。
 
@@ -61,7 +61,7 @@ datetime-picker/date-and-time-range
 
 ## 单个面板 ^(2.14.0)
 
-:::demo 默认日期选择器范围有两个面板。 如果你想要一个面板设置 `single-panel` 属性。
+:::demo 默认日期选择器范围有两个面板。如果你想要一个面板设置 `single-panel` 属性。
 
 datetime-picker/single-panel
 
@@ -69,7 +69,7 @@ datetime-picker/single-panel
 
 ## 默认的起始与结束时刻
 
-:::demo 使用`datetimerange`进行范围选择时，在日期选择面板中选定起始与结束的日期，默认会使用该日期的`00:00:00`作为起始与结束的时刻；通过选项`default-time`可以控制选中起始与结束日期时所使用的具体时刻。 我们可以使用 `default-time` 属性来控制它。 `default-time`接受一个数组，其中第一项控制起始日期的具体时刻，第二项控制结束日期的具体时刻。 第一项控制开始日期的时间值，第二项控制结束日期的时间值。
+:::demo 使用`datetimerange`进行范围选择时，在日期选择面板中选定起始与结束的日期，默认会使用该日期的`00:00:00`作为起始与结束的时刻；通过选项`default-time`可以控制选中起始与结束日期时所使用的具体时刻。我们可以使用 `default-time` 属性来控制它。 `default-time`接受一个数组，其中第一项控制起始日期的具体时刻，第二项控制结束日期的具体时刻。第一项控制开始日期的时间值，第二项控制结束日期的时间值。
 
 datetime-picker/default-time
 
@@ -110,8 +110,8 @@ datetime-picker/custom-icon
 | placement ^(2.8.4)           | 下拉框出现的位置                                                                                                  | `展示位置`                                                                                               | bottom                             |
 | range-separator              | 选择范围时的分隔符                                                                                                 | ^[string]                                                                                            | '-'                                |
 | default-value                | 可选，选择器打开时默认显示的时间                                                                                          | ^[object]`Date \| [Date, Date]`                                                                     | —                                  |
-| default-time                 | 选择日期后的默认时间值。 如未指定则默认时间值为 `00:00:00`                                                                       | ^[object]`Date \| [Date, Date]`                                                                     | —                                  |
-| value-format                 | 可选，绑定值的格式。 不指定则绑定值为 Date 对象                                                                               | ^[string] see [date formats](https://day.js.org/docs/en/display/format)                              | —                                  |
+| default-time                 | 选择日期后的默认时间值。如未指定则默认时间值为 `00:00:00`                                                                        | ^[object]`Date \| [Date, Date]`                                                                     | —                                  |
+| value-format                 | 可选，绑定值的格式。不指定则绑定值为 Date 对象                                                                                | ^[string] see [date formats](https://day.js.org/docs/en/display/format)                              | —                                  |
 | date-format ^(2.4.0)         | 可选，输入框内部面板中显示的日期格式                                                                                        | ^[string] see [date formats](https://day.js.org/docs/en/display/format)                              | YYYY-MM-DD                         |
 | time-format ^(2.4.0)         | 可选，输入框内部面板中显示的时间格式                                                                                        | ^[string] see [date formats](https://day.js.org/docs/en/display/format)                              | HH:mm:ss                           |
 | id                           | 等价于原生 input `id` 属性                                                                                       | ^[string] / ^[array]`[string, string]`                                                               | —                                  |
@@ -121,7 +121,7 @@ datetime-picker/custom-icon
 | prefix-icon                  | 自定义前缀图标组件                                                                                                 | ^[string] / `Component`                                                                              | Date                               |
 | clear-icon                   | 自定义清除图标                                                                                                   | ^[string] / `Component`                                                                              | CircleClose                        |
 | shortcuts                    | 设置快捷选项，需要传入数组对象                                                                                           | ^[array]`Array<{ text: string, value: Date \| Function }>`                                    | —                                  |
-| disabled-date                | 一个用来判断该日期是否被禁用的函数，接受一个 Date 对象作为参数。 应该返回一个 Boolean 值。                                                     | ^[Function]`(data: Date) => boolean`                                                              | —                                  |
+| disabled-date                | 一个用来判断该日期是否被禁用的函数，接受一个 Date 对象作为参数。应该返回一个 Boolean 值。                                                      | ^[Function]`(data: Date) => boolean`                                                              | —                                  |
 | disabled-hours               | 禁止选择部分小时选项                                                                                                | ^[Function]`(role: string, comparingDate?: Dayjs) => number[]`                                    | —                                  |
 | disabled-minutes             | 禁止选择部分分钟选项                                                                                                | ^[Function]`(hour: number, role: string, comparingDate?: Dayjs) => number[]`                      | —                                  |
 | disabled-seconds             | 禁止选择部分秒选项                                                                                                 | ^[Function]`(hour: number, minute: number, role: string, comparingDate?: Dayjs) => number[]`      | —                                  |
@@ -136,15 +136,15 @@ datetime-picker/custom-icon
 
 ### 事件
 
-| 事件名             | 说明                                  | 回调参数                                                                                           |
-| --------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------- |
-| change          | 当用户确认值或点击外部时触发                      | ^[Function]`(val: typeof v-model) => void`                                                  |
-| blur            | 在组件 Input 失去焦点时触发                   | ^[Function]`(e: FocusEvent) => void`                                                        |
-| focus           | 在组件 Input 获得焦点时触发                   | ^[Function]`(e: FocusEvent) => void`                                                        |
-| clear ^(2.7.7)  | 当点击清除按钮时触发                          | ^[Function]`() => void`                                                                     |
-| calendar-change | 如果用户没有选择日期，那默认展示当前日的月份。 仅用于 `range` | ^[Function]`(val: [Date, null \| Date]) => void`                                           |
-| panel-change    | 当日期面板改变时触发。                         | ^[Function]`(date: Date \| [Date, Date], mode: 'month' \| 'year', view?: string) => void` |
-| visible-change  | 当 DateTimePicker 的下拉列表出现/消失时触发      | ^[Function]`(visibility: boolean) => void`                                                  |
+| 事件名             | 说明                                 | 回调参数                                                                                           |
+| --------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------- |
+| change          | 当用户确认值或点击外部时触发                     | ^[Function]`(val: typeof v-model) => void`                                                  |
+| blur            | 在组件 Input 失去焦点时触发                  | ^[Function]`(e: FocusEvent) => void`                                                        |
+| focus           | 在组件 Input 获得焦点时触发                  | ^[Function]`(e: FocusEvent) => void`                                                        |
+| clear ^(2.7.7)  | 当点击清除按钮时触发                         | ^[Function]`() => void`                                                                     |
+| calendar-change | 如果用户没有选择日期，那默认展示当前日的月份。仅用于 `range` | ^[Function]`(val: [Date, null \| Date]) => void`                                           |
+| panel-change    | 当日期面板改变时触发。                        | ^[Function]`(date: Date \| [Date, Date], mode: 'month' \| 'year', view?: string) => void` |
+| visible-change  | 当 DateTimePicker 的下拉列表出现/消失时触发     | ^[Function]`(visibility: boolean) => void`                                                  |
 
 ### Slots
 

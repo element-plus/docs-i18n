@@ -29,7 +29,7 @@ watermark/multi-line
 
 ## 图片水印
 
-通过 `image` 指定图像地址。 为了确保图像清晰展示而不是被拉伸，请设置宽度和高度，建议使用至少两倍的宽度和高度的图片来保证显示效果。
+通过 `image` 指定图像地址。为了确保图像清晰展示而不是被拉伸，请设置宽度和高度，建议使用至少两倍的宽度和高度的图片来保证显示效果。
 
 :::demo
 
@@ -61,7 +61,7 @@ watermark/custom
 | content | 水印文本内容                       | ^[string]/^[array]`string[]` | Element Plus                     |
 | font    | 文字样式                         | [Font](#font)                | [字体](#font)                      |
 | gap     | 水印之间的间距                      | ^[array]`[number, number]`   | \[100, 100\]                   |
-| offset  | 水印从容器左上角的偏移 默认值为 `gap/2`     | ^[array]`[number, number]`   | \[gap\[0\]/2, gap\[1\]/2\] |
+| offset  | 水印从容器左上角的偏移默认值为 `gap/2`      | ^[array]`[number, number]`   | \[gap\[0\]/2, gap\[1\]/2\] |
 
 ### Font
 

@@ -91,7 +91,7 @@ tree-select/lazy
 
 ## 使用 node-key 属性
 
-默认情况下，`modelValue` 会查找 `value` 键。 对于其他数据结构，必须提供 `node-key` 才能正常工作。
+默认情况下，`modelValue` 会查找 `value` 键。对于其他数据结构，必须提供 `node-key` 才能正常工作。
 
 :::tip
 
@@ -141,13 +141,13 @@ tree-select/node-key
 | getCheckedNodes ^(deprecated)        | 如果节点可以被选中，(`show-checkbox` 为 `true`), 本方法将返回当前选中节点的数组     | (leafOnly, includeHalfChecked) 接收两个布尔类型参数: 1. 默认值为 `false`. 若参数为 `true`, 它将返回当前选中节点的子节点 2. 默认值为 `false`. 如果参数为 `true`, 返回值包含半选中节点数据                     |
 | setCheckedNodes ^(deprecated)        | 设置目前选中的节点，使用此方法必须设置 `node-key` 属性                         | 要选中的节点构成的数组                                                                                                                                             |
 | getCheckedKeys ^(deprecated)         | 若节点可用被选中 (`show-checkbox` 为 `true`), 它将返回当前选中节点 key 的数组   | (leafOnly) 接收一个布尔类型参数，默认为 `false`. 若参数为 `true`, 它将返回当前选中节点的子节点                                                                                          |
-| setCheckedKeys ^(deprecated)         | 设置目前选中的节点，使用此方法必须设置 `node-key` 属性                         | (keys, leafOnly) 接收两个参数: 1. 一个需要被选中的多节点 key 的数组 2. 布尔类型的值 如果设置为 `true`，将只设置选中的叶子节点状态。 默认值是 `false`.                                                     |
+| setCheckedKeys ^(deprecated)         | 设置目前选中的节点，使用此方法必须设置 `node-key` 属性                         | (keys, leafOnly) 接收两个参数: 1. 一个需要被选中的多节点 key 的数组 2. 布尔类型的值如果设置为 `true`，将只设置选中的叶子节点状态。默认值是 `false`.                                                       |
 | setChecked ^(deprecated)             | 设置节点是否被选中, 使用此方法必须设置 `node-key` 属性                        | (key/data, checked, deep) 接收三个参数: 1. 要选中的节点的 key 或者数据 2. 一个布尔类型参数表明是否选中. 3. 一个布尔类型参数，用于指示是否递归选中/取消选中子节点（自 ^(2.14.0) 起，无论 `check-strictly` 设置如何，该行为均有效）。 |
 | getHalfCheckedNodes ^(deprecated)    | 如果节点可用被选中 (`show-checkbox` 为 `true`), 它将返回当前半选中的节点组成的数组   | :::                                                                                                                                                     |
 | getHalfCheckedKeys ^(deprecated)     | 若节点可被选中(`show-checkbox` 为 `true`)，则返回目前半选中的节点的 key 所组成的数组 | :::                                                                                                                                                     |
 | getCurrentKey ^(deprecated)          | 返回当前被选中节点的数据 (如果没有则返回 null)                               | :::                                                                                                                                                     |
 | getCurrentNode ^(deprecated)         | 返回当前被选中节点的数据 (如果没有则返回 null)                               | :::                                                                                                                                                     |
-| setCurrentKey ^(deprecated)          | 通过 key 设置某个节点的当前选中状态，使用此方法必须设置 `node-key ` 属性             | (key, shouldAutoExpandParent=true) 1. 待被选节点的 key， 如果为 `null`, 取消当前选中的节点 2. 是否展开父节点                                                                      |
+| setCurrentKey ^(deprecated)          | 通过 key 设置某个节点的当前选中状态，使用此方法必须设置 `node-key ` 属性             | (key, shouldAutoExpandParent=true) 1. 待被选节点的 key，如果为 `null`, 取消当前选中的节点 2. 是否展开父节点                                                                       |
 | setCurrentNode ^(deprecated)         | 设置节点为选中状态，使用此方法必须设置 `node-key `属性                         | (node, shouldAutoExpandParent=true) 1. 待被选中的节点 2. 是否展开父节点                                                                                               |
 | getNode ^(deprecated)                | 根据 data 或者 key 拿到 Tree 组件中的 node                          | (data) 节点的 data 或 key                                                                                                                                   |
 | remove ^(deprecated)                 | 删除 Tree 中的一个节点，使用此方法必须设置 node-key 属性                      | (data) 要删除的节点的 data 或者 node 对象                                                                                                                          |

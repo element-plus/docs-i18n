@@ -37,7 +37,7 @@ tree-v2/selectable
 
 节点的复选框可以设置为禁用。
 
-:::demo 在示例中，属性在 defaultProps 中声明了 `disabled`，一些节点被设置为 `disabled：true`。 相应的复选框已禁用，不能点击。
+:::demo 在示例中，属性在 defaultProps 中声明了 `disabled`，一些节点被设置为 `disabled：true`。相应的复选框已禁用，不能点击。
 
 tree-v2/disabled
 
@@ -75,7 +75,7 @@ tree-v2/custom-node-class
 
 ## 自定义图标 ^(2.10.3)
 
-您可以自定义不同节点状态的图标。 树节点暴露了 `expanded` 属性和 `isLeaf` 属性，允许你根据节点的状态动态渲染不同的图标：叶子节点、展开的节点或折叠的节点。
+您可以自定义不同节点状态的图标。树节点暴露了 `expanded` 属性和 `isLeaf` 属性，允许你根据节点的状态动态渲染不同的图标：叶子节点、展开的节点或折叠的节点。
 
 :::demo
 
@@ -85,9 +85,9 @@ tree-v2/custom-icon
 
 ## 树节点过滤 ^(2.9.1)
 
-`filter-method` 方法只有在版本 `2.9.1` 之后才能接受第三个参数。 树节点是可以被过滤的
+`filter-method` 方法只有在版本 `2.9.1` 之后才能接受第三个参数。树节点是可以被过滤的
 
-:::demo 在需要对节点进行过滤时，调用 Tree 实例的 `filter` 方法， 参数为关键字。 需要注意的是，此时需要设置 `filter-method`，值为过滤函数。
+:::demo 在需要对节点进行过滤时，调用 Tree 实例的 `filter` 方法，参数为关键字。需要注意的是，此时需要设置 `filter-method`，值为过滤函数。
 
 tree-v2/filter
 
@@ -111,7 +111,7 @@ tree-v2/filter
 | check-strictly                | 在显示复选框的情况下，是否严格的遵循父子不互相关联的做法，默认为 false                        | ^[boolean]                                                                     | false |
 | default-checked-keys          | 默认勾选的节点的 key 的数组                                              | ^[array]`Array<string \| number>`                                       | —     |
 | current-node-key              | 当前选中的节点                                                       | ^[string] / ^[number]                                                          | —     |
-| filter-method                 | 对树节点进行筛选时执行的方法，返回 true 表示这个节点可以显示， 返回 `false` 则表示这个节点会被隐藏     | ^[Function]`(query: string, data: TreeNodeData, node: TreeNode) => boolean` | —     |
+| filter-method                 | 对树节点进行筛选时执行的方法，返回 true 表示这个节点可以显示，返回 `false` 则表示这个节点会被隐藏      | ^[Function]`(query: string, data: TreeNodeData, node: TreeNode) => boolean` | —     |
 | indent                        | 相邻级节点间的水平缩进，单位为像素                                             | ^[number]                                                                      | 16    |
 | icon                          | 自定义树节点图标组件                                                    | ^[string] / ^[Component]                                                       | —     |
 | item-size ^(2.2.33)           | 自定义树节点的高度                                                     | ^[number]                                                                      | 26    |

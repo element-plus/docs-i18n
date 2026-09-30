@@ -9,7 +9,7 @@ lang: zh-CN
 
 ## 直线进度条
 
-:::demo Progress 组件设置 `percentage` 属性即可，表示进度条对应的百分比。 该属性**必填**，并且必须在 `0-100` 的范围内。 你可以通过设置 `format` 来自定义文字显示的格式。
+:::demo Progress 组件设置 `percentage` 属性即可，表示进度条对应的百分比。该属性**必填**，并且必须在 `0-100` 的范围内。你可以通过设置 `format` 来自定义文字显示的格式。
 
 progress/linear-progress-bar
 
@@ -27,7 +27,7 @@ progress/internal-percentage
 
 ## 自定义进度条的颜色
 
-可以通过 `color` 属性来设置进度条的颜色。 该属性可以接受十六进制颜色值，函数和数组。
+可以通过 `color` 属性来设置进度条的颜色。该属性可以接受十六进制颜色值，函数和数组。
 
 :::demo
 
@@ -71,7 +71,7 @@ progress/indeterminate-progress
 
 ## 条纹进度条
 
-:::demo 通过设置 `striped` 属性获取条纹进度条。 也可以使用 `striped-flow` 属性来使条纹流动起来。 使用`duration` 属性来控制条纹流动的速度。
+:::demo 通过设置 `striped` 属性获取条纹进度条。也可以使用 `striped-flow` 属性来使条纹流动起来。 使用`duration` 属性来控制条纹流动的速度。
 
 progress/striped-progress
 
@@ -90,7 +90,7 @@ progress/striped-progress
 | status                 | 进度条当前状态                                     | ^[enum]`'success' \| 'exception' \| 'warning'`                                                               | —     |
 | indeterminate          | 是否为动画进度条                                    | ^[boolean]                                                                                                     | false |
 | duration               | 控制动画进度条速度和条纹进度条流动速度                         | ^[number]                                                                                                      | 3     |
-| color                  | 进度条背景色 （会覆盖 `status` 状态颜色）                  | ^[string] / ^[function]`(percentage: number) => string` / ^[Array]`{ color: string; percentage: number }[]` | ''    |
+| color                  | 进度条背景色（会覆盖 `status` 状态颜色）                   | ^[string] / ^[function]`(percentage: number) => string` / ^[Array]`{ color: string; percentage: number }[]` | ''    |
 | width                  | 环形进度条画布宽度（只在 type 为 circle 或 dashboard 时可用） | ^[number]                                                                                                      | 126   |
 | show-text              | 是否显示进度条文字内容                                 | ^[boolean]                                                                                                     | true  |
 | stroke-linecap         | circle/dashboard 类型路径两端的形状                  | ^[enum]`'butt' \| 'round' \| 'square'`                                                                       | round |

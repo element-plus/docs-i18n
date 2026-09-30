@@ -31,7 +31,7 @@ alert/theme
 
 你可以自定义关闭按钮为文字或其他符号。
 
-:::demo 你可以设置 Alert 组件是否为可关闭状态， 关闭按钮的内容以及关闭时的回调函数同样可以定制。 `closable` 属性决定 Alert 组件是否可关闭， 该属性接受一个 `Boolean`，默认为 `false`。 你可以设置 `close-text` 属性来代替右侧的关闭图标， 需要注意的是 `close-text` 必须是一个字符串。 当 Alert 组件被关闭时会触发 `close` 事件。
+:::demo 你可以设置 Alert 组件是否为可关闭状态，关闭按钮的内容以及关闭时的回调函数同样可以定制。 `closable` 属性决定 Alert 组件是否可关闭，该属性接受一个 `Boolean`，默认为 `false`。你可以设置 `close-text` 属性来代替右侧的关闭图标，需要注意的是 `close-text` 必须是一个字符串。当 Alert 组件被关闭时会触发 `close` 事件。
 
 alert/close-button
 
@@ -41,7 +41,7 @@ alert/close-button
 
 你可以通过为 Alert 组件添加图标来提高可读性。
 
-:::demo 通过设置 `show-icon` 属性来显示 Alert 的 icon，这能更有效地向用户展示你的显示意图。 或者你可以使用 `icon` slot 自定义 icon 内容。
+:::demo 通过设置 `show-icon` 属性来显示 Alert 的 icon，这能更有效地向用户展示你的显示意图。或者你可以使用 `icon` slot 自定义 icon 内容。
 
 alert/icon
 
@@ -61,7 +61,7 @@ alert/center
 
 为 Alert 组件添加一个更加详细的描述来使用户了解更多信息。
 
-:::demo 除了必填的 `title` 属性外，你可以设置 `description` 属性来帮助你更好地介绍，我们称之为辅助性文字。 辅助性文字只能存放文本内容，当内容超出长度限制时会自动换行显示。
+:::demo 除了必填的 `title` 属性外，你可以设置 `description` 属性来帮助你更好地介绍，我们称之为辅助性文字。辅助性文字只能存放文本内容，当内容超出长度限制时会自动换行显示。
 
 alert/description
 

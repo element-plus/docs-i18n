@@ -15,7 +15,7 @@ lang: zh-CN
 
 :::tip
 
-新的 API `value` 已在 ^(2.6.0) 版本添加，文档中的示例都将使用 `value`。 如果您使用的版本 **低于** ^(2.6.0) 并且使用 `checkbox-group`，请参考：
+新的 API `value` 已在 ^(2.6.0) 版本添加，文档中的示例都将使用 `value`。如果您使用的版本 **低于** ^(2.6.0) 并且使用 `checkbox-group`，请参考：
 
 :::
 
@@ -34,7 +34,7 @@ lang: zh-CN
 
 单独使用可以表示两种状态之间的切换，写在标签中的内容为 checkbox 按钮后的介绍。
 
-:::demo `checkbox-group`元素能把多个 checkbox 管理为一组，只需要在 Group 中使用 `v-model` 绑定 `Array` 类型的变量即可。 只有一个选项时的默认值类型为 `Boolean`，当选中时值为`true`。 `el-checkbox` 标签中的内容将成为复选框按钮之后的描述。
+:::demo `checkbox-group`元素能把多个 checkbox 管理为一组，只需要在 Group 中使用 `v-model` 绑定 `Array` 类型的变量即可。只有一个选项时的默认值类型为 `Boolean`，当选中时值为`true`。 `el-checkbox` 标签中的内容将成为复选框按钮之后的描述。
 
 checkbox/basic
 
@@ -54,7 +54,7 @@ checkbox/disabled
 
 适用于多个勾选框绑定到同一个数组的情景，通过是否勾选来表示这一组选项中选中的项。
 
-:::demo 在 `el-checkbox` 元素中定义 `v-model` 绑定变量，单一的 `checkbox` 中，默认绑定变量的值会是 `Boolean`，选中为 `true`。 在 `el-checkbox` 组件中，`value` 是选择框的值。 如果该组件下没有被传入内容，那么 `label` 将会作为 checkbox 按钮后的介绍。 `value` 也与数组中的元素值相对应。 如果指定的值存在于数组中，就处于选择状态，反之亦然。
+:::demo 在 `el-checkbox` 元素中定义 `v-model` 绑定变量，单一的 `checkbox` 中，默认绑定变量的值会是 `Boolean`，选中为 `true`。在 `el-checkbox` 组件中，`value` 是选择框的值。如果该组件下没有被传入内容，那么 `label` 将会作为 checkbox 按钮后的介绍。 `value` 也与数组中的元素值相对应。如果指定的值存在于数组中，就处于选择状态，反之亦然。
 
 checkbox/grouping
 
@@ -62,7 +62,7 @@ checkbox/grouping
 
 ## Options 属性 ^(2.11.2)
 
-:::demo 基础用法 `el-checkbox-group` 的快捷示例。 您可以通过 `props` 属性自定义 `options` 的别名。
+:::demo 基础用法 `el-checkbox-group` 的快捷示例。您可以通过 `props` 属性自定义 `options` 的别名。
 
 checkbox/options
 
@@ -92,7 +92,7 @@ checkbox/limitation
 
 按钮样式的多选组合。
 
-:::demo 只需要把 `el-checkbox` 元素替换为 `el-checkbox-button` 元素即可。 此外，Element Plus 还提供了`size`属性。
+:::demo 只需要把 `el-checkbox` 元素替换为 `el-checkbox-button` 元素即可。此外，Element Plus 还提供了`size`属性。
 
 checkbox/button-style
 
@@ -114,7 +114,7 @@ checkbox/with-border
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ----- |
 | model-value / v-model          | 选中项绑定值                                                                                                                                      | ^[string] / ^[number] / ^[boolean]             | —     |
 | value ^(2.6.0)                 | 选中状态的值（只有在`checkbox-group`或者绑定对象类型为`array`时有效）                                                                                              | ^[string] / ^[number] / ^[boolean] / ^[object] | —     |
-| label                          | 选中状态的值，只有在绑定对象类型为 `array` 时有效。 如果没有 value， `label`则作为`value`使用                                                                              | ^[string] / ^[number] / ^[boolean] / ^[object] | —     |
+| label                          | 选中状态的值，只有在绑定对象类型为 `array` 时有效。如果没有 value， `label`则作为`value`使用                                                                               | ^[string] / ^[number] / ^[boolean] / ^[object] | —     |
 | true-value ^(2.6.0)            | 选中时的值                                                                                                                                       | ^[string] / ^[number]                          | —     |
 | false-value ^(2.6.0)           | 没有选中时的值                                                                                                                                     | ^[string] / ^[number]                          | —     |
 | disabled                       | 是否禁用                                                                                                                                        | ^[boolean]                                     | false |
@@ -181,17 +181,17 @@ checkbox/with-border
 
 ### CheckboxButton Attributes
 
-| 名称                        | 详情                                                             | 类型                                             | 默认值   |
-| ------------------------- | -------------------------------------------------------------- | ---------------------------------------------- | ----- |
-| value ^(2.6.0)            | 选中状态的值，只有在绑定对象类型为 `array` 时有效。                                 | ^[string] / ^[number] / ^[boolean] / ^[object] | —     |
-| label                     | 选中状态的值，只有在绑定对象类型为 `array` 时有效。 如果没有 value， `label`则作为`value`使用 | ^[string] / ^[number] / ^[boolean] / ^[object] | —     |
-| true-value ^(2.6.0)       | 选中时的值                                                          | ^[string] / ^[number]                          | —     |
-| false-value ^(2.6.0)      | 没有选中时的值                                                        | ^[string] / ^[number]                          | —     |
-| disabled                  | 是否禁用                                                           | ^[boolean]                                     | false |
-| name                      | 原生 name 属性                                                     | ^[string]                                      | —     |
-| checked                   | 当前是否勾选                                                         | ^[boolean]                                     | false |
-| true-label ^(deprecated)  | 选中时的值                                                          | ^[string] / ^[number]                          | —     |
-| false-label ^(deprecated) | 没有选中时的值                                                        | ^[string] / ^[number]                          | —     |
+| 名称                        | 详情                                                            | 类型                                             | 默认值   |
+| ------------------------- | ------------------------------------------------------------- | ---------------------------------------------- | ----- |
+| value ^(2.6.0)            | 选中状态的值，只有在绑定对象类型为 `array` 时有效。                                | ^[string] / ^[number] / ^[boolean] / ^[object] | —     |
+| label                     | 选中状态的值，只有在绑定对象类型为 `array` 时有效。如果没有 value， `label`则作为`value`使用 | ^[string] / ^[number] / ^[boolean] / ^[object] | —     |
+| true-value ^(2.6.0)       | 选中时的值                                                         | ^[string] / ^[number]                          | —     |
+| false-value ^(2.6.0)      | 没有选中时的值                                                       | ^[string] / ^[number]                          | —     |
+| disabled                  | 是否禁用                                                          | ^[boolean]                                     | false |
+| name                      | 原生 name 属性                                                    | ^[string]                                      | —     |
+| checked                   | 当前是否勾选                                                        | ^[boolean]                                     | false |
+| true-label ^(deprecated)  | 选中时的值                                                         | ^[string] / ^[number]                          | —     |
+| false-label ^(deprecated) | 没有选中时的值                                                       | ^[string] / ^[number]                          | —     |
 
 ### CheckboxButton Slots
 

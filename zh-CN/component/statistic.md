@@ -9,7 +9,7 @@ lang: zh-CN
 
 ## 基础用法
 
-:::demo 用于突出某个或某组数字时，如统计数值、金额、排名等，数值和标题前后都可以加icon、单位等元素。 可以使用 [vueuse](https://vueuse.org/core/useTransition/) 实现数值的变化动效
+:::demo 用于突出某个或某组数字时，如统计数值、金额、排名等，数值和标题前后都可以加icon、单位等元素。可以使用 [vueuse](https://vueuse.org/core/useTransition/) 实现数值的变化动效
 
 statistic/basic
 

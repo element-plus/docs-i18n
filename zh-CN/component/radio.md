@@ -15,7 +15,7 @@ lang: zh-CN
 
 :::tip
 
-新的 API `value` 已在 ^(2.6.0) 版本添加，文档中的示例都将使用 `value`。 如果您使用的版本 **低于** ^(2.6.0)，请参考：
+新的 API `value` 已在 ^(2.6.0) 版本添加，文档中的示例都将使用 `value`。如果您使用的版本 **低于** ^(2.6.0)，请参考：
 
 :::
 
@@ -32,9 +32,9 @@ lang: zh-CN
 
 ## 基础用法
 
-单选框不应该有太多的可选项， 如果你有很多的可选项你应该使用选择框而不是单选框。
+单选框不应该有太多的可选项，如果你有很多的可选项你应该使用选择框而不是单选框。
 
-:::demo 要使用 Radio 组件，只需要设置`v-model`绑定变量， 选中意味着变量的值为相应 Radio `value`属性的值， `value`可以是`String`、`Number` 或 `Boolean`。
+:::demo 要使用 Radio 组件，只需要设置`v-model`绑定变量，选中意味着变量的值为相应 Radio `value`属性的值， `value`可以是`String`、`Number` 或 `Boolean`。
 
 radio/basic-usage
 
@@ -54,7 +54,7 @@ radio/disabled
 
 适用于在多个互斥的选项中选择的场景
 
-:::demo 结合`el-radio-group`元素和子元素`el-radio`可以实现单选组， 为 `el-radio-group` 绑定 `v-model`，再为 每一个 `el-radio` 设置好 `label` 属性即可， 另外，还可以通过 `change` 事件来响应变化，它会传入一个参数 `value` 来表示改变之后的值。
+:::demo 结合`el-radio-group`元素和子元素`el-radio`可以实现单选组，为 `el-radio-group` 绑定 `v-model`，再为 每一个 `el-radio` 设置好 `label` 属性即可，另外，还可以通过 `change` 事件来响应变化，它会传入一个参数 `value` 来表示改变之后的值。
 
 radio/radio-group
 
@@ -70,7 +70,7 @@ radio/with-borders
 
 ## Options 属性 ^(2.11.2)
 
-:::demo 基础用法 `el-radio-group` 的快捷示例。 您可以通过 `props` 属性自定义 `options` 的别名。
+:::demo 基础用法 `el-radio-group` 的快捷示例。您可以通过 `props` 属性自定义 `options` 的别名。
 
 radio/options
 

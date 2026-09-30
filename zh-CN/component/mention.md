@@ -59,7 +59,7 @@ mention/loading
 
 ## 自定义触发字段
 
-通过 `prefix` 属性 自定义触发字段。 默认为 `@`, `Array<string>` 。
+通过 `prefix` 属性 自定义触发字段。默认为 `@`, `Array<string>` 。
 
 :::demo
 
@@ -69,8 +69,7 @@ mention/prefix
 
 ## 整体删除
 
-将`whole`属性设置为 `true`，当您按下退格键时，此处的 mention 区域将作为一个整体被删除。
-设置 "check-is-whole" 属性来自定义检查逻辑。
+将`whole`属性设置为 `true`，当您按下退格键时，此处的 mention 区域将作为一个整体被删除。设置 "check-is-whole" 属性来自定义检查逻辑。
 :::demo
 
 mention/whole
@@ -99,8 +98,8 @@ mention/form
 | ------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
 | options                                                                   | 提及选项列表                                                         | ^[array]`MentionOption[]`                                                                                                        | `[]`                                                          |
 | props ^(2.11.3)        | options 的配置                                                    | ^[object]`MentionOptionProps`                                                                                                    | `{value: 'value', label: 'label', disabled: 'disabled'}`      |
-| prefix                                                                    | 触发字段的前缀。 字符串长度必须且只能为 1                                         | ^[string] \| ^[array]`string[]`                                              | `'@'`                                                         |
-| split                                                                     | 用于拆分提及的字符。 字符串长度必须且只能为 1                                       | ^[string]                                                                                                                        | `' '`                                                         |
+| prefix                                                                    | 触发字段的前缀。字符串长度必须且只能为 1                                          | ^[string] \| ^[array]`string[]`                                              | `'@'`                                                         |
+| split                                                                     | 用于拆分提及的字符。字符串长度必须且只能为 1                                        | ^[string]                                                                                                                        | `' '`                                                         |
 | filter-option                                                             | 定制筛选器选项逻辑                                                      | ^[false] \| ^[Function]`(pattern: string, option: MentionOption) => boolean` | —                                                             |
 | placement                                                                 | 设置弹出位置                                                         | ^[string]`'bottom' \| 'top'`                                                                                                     | `'bottom'`                                                    |
 | show-arrow                                                                | 下拉菜单的内容是否有箭头                                                   | ^[boolean]                                                                                                                       | `false`                                                       |

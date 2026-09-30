@@ -11,7 +11,7 @@ lang: zh-CN
 
 Popconfirm 提供 9 种展示位置。
 
-:::demo 使用 `title` 属性来设置点击参考元素时显示的信息。 由 `placement` 属性决定 Popconfirm 的位置。 该属性值格式为：`[方向]-[对齐位置]`，可供选择的四个方向分别是`top`、`left`、`right`、`bottom`，可供选择的三种对齐方式分别是`start`、`end`、`null`，默认的对齐方式为null。 以 `placement="left-end"` 为例，气泡确认框会显示在悬停元素的左侧，且提示信息的底部与悬停元素的底部对齐。
+:::demo 使用 `title` 属性来设置点击参考元素时显示的信息。由 `placement` 属性决定 Popconfirm 的位置。该属性值格式为：`[方向]-[对齐位置]`，可供选择的四个方向分别是`top`、`left`、`right`、`bottom`，可供选择的三种对齐方式分别是`start`、`end`、`null`，默认的对齐方式为null。以 `placement="left-end"` 为例，气泡确认框会显示在悬停元素的左侧，且提示信息的底部与悬停元素的底部对齐。
 
 popconfirm/placement
 
@@ -19,7 +19,7 @@ popconfirm/placement
 
 ## 基础用法
 
-Popconfirm 的属性与 Popover 很类似， 因此对于重复属性，请参考 Popover 的文档，在此文档中不做详尽解释。
+Popconfirm 的属性与 Popover 很类似，因此对于重复属性，请参考 Popover 的文档，在此文档中不做详尽解释。
 
 :::demo 在 Popconfirm 中，只有 `title` 属性可用，`content` 属性会被忽略。
 

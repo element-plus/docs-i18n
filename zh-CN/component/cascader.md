@@ -11,7 +11,7 @@ lang: zh-CN
 
 有两种触发子菜单的方式
 
-:::demo 只需为 Cascader 的`options`属性指定选项数组即可渲染出一个级联选择器。 通过 `props.expandTrigger` 属性控制子节点的展开方式
+:::demo 只需为 Cascader 的`options`属性指定选项数组即可渲染出一个级联选择器。通过 `props.expandTrigger` 属性控制子节点的展开方式
 
 cascader/basic
 
@@ -21,7 +21,7 @@ cascader/basic
 
 通过在数据源中设置 `disabled` 字段来声明该选项是禁用的
 
-:::demo 本例中，`options`指定的数组中的第一个元素含有`disabled: true`键值对，因此是禁用的。 在默认情况下，Cascader 会检查数据中每一项的`disabled`字段是否为`true`，如果你的数据中表示禁用含义的字段名不为`disabled`，可以通过`props.disabled`属性来指定（详见下方 API 表格）。 当然，`value`、`label`和`children`这三个字段名也可以通过同样的方式指定。
+:::demo 本例中，`options`指定的数组中的第一个元素含有`disabled: true`键值对，因此是禁用的。在默认情况下，Cascader 会检查数据中每一项的`disabled`字段是否为`true`，如果你的数据中表示禁用含义的字段名不为`disabled`，可以通过`props.disabled`属性来指定（详见下方 API 表格）。当然，`value`、`label`和`children`这三个字段名也可以通过同样的方式指定。
 
 cascader/option-disabling
 
@@ -51,7 +51,7 @@ cascader/clear-icon
 
 可以仅在输入框中显示选中项最后一级的标签，而不是选中项所在的完整路径。
 
-:::demo 属性`show-all-levels`定义了是否显示完整的路径， 将其赋值为 `false` 则仅显示最后一级。
+:::demo 属性`show-all-levels`定义了是否显示完整的路径，将其赋值为 `false` 则仅显示最后一级。
 
 cascader/last-level
 
@@ -82,7 +82,7 @@ const props = { multiple: true }
 </template>
 ```
 
-:::demo 使用多选时，所有选中的标签将默认显示。 您可以设置 `collapse = true` 将选中的标签折叠。 您可以设置 `max-collapse-tags` 来显示最大tag数量，默认1。 您可以使用 `collapse-tags-tooltip` 属性来启用鼠标悬停折叠文字以显示具体所选值的行为。
+:::demo 使用多选时，所有选中的标签将默认显示。您可以设置 `collapse = true` 将选中的标签折叠。您可以设置 `max-collapse-tags` 来显示最大tag数量，默认1。您可以使用 `collapse-tags-tooltip` 属性来启用鼠标悬停折叠文字以显示具体所选值的行为。
 
 cascader/multiple-selection
 
@@ -90,7 +90,7 @@ cascader/multiple-selection
 
 ## 选择任意一级选项
 
-在单选模式下，你只能选择叶子节点；而在多选模式下，勾选父节点真正选中的都是叶子节点。 启用该功能后，可让父子节点取消关联，选择任意一级选项。
+在单选模式下，你只能选择叶子节点；而在多选模式下，勾选父节点真正选中的都是叶子节点。启用该功能后，可让父子节点取消关联，选择任意一级选项。
 
 :::demo 可通过 `props.checkStrictly = true` 来设置父子节点取消选中关联，从而达到选择任意一级选项的目的。
 
@@ -102,7 +102,7 @@ cascader/any-level
 
 当选中某一级时，动态加载该级下的选项。
 
-:::demo 通过`lazy`开启动态加载，并通过`lazyload`来设置加载数据源的方法。 `lazyload`方法有两个参数，第一个参数`node`为当前点击的节点，第二个`resolve`为数据加载完成的回调(必须调用)。 为了更准确的显示节点的状态，还可以对节点数据添加是否为叶子节点的标志位 (默认字段为`leaf`，可通过`props.leaf`修改)。 否则，将以有无子节点来判断其是否为叶子节点。
+:::demo 通过`lazy`开启动态加载，并通过`lazyload`来设置加载数据源的方法。 `lazyload`方法有两个参数，第一个参数`node`为当前点击的节点，第二个`resolve`为数据加载完成的回调(必须调用)。为了更准确的显示节点的状态，还可以对节点数据添加是否为叶子节点的标志位 (默认字段为`leaf`，可通过`props.leaf`修改)。否则，将以有无子节点来判断其是否为叶子节点。
 
 cascader/dynamic-loading
 
@@ -112,7 +112,7 @@ cascader/dynamic-loading
 
 可以快捷地搜索选项并选择。
 
-:::demo 通过添加`filterable`来启用过滤。 Cascader 会匹配所有节点的标签和它们的亲节点的标签，是否包含有输入的关键字。 你也可以用`filter-method`自定义搜索逻辑，接受一个函数，第一个参数是节点`node`，第二个参数是搜索关键词`keyword`，通过返回布尔值表示是否命中。
+:::demo 通过添加`filterable`来启用过滤。 Cascader 会匹配所有节点的标签和它们的亲节点的标签，是否包含有输入的关键字。你也可以用`filter-method`自定义搜索逻辑，接受一个函数，第一个参数是节点`node`，第二个参数是搜索关键词`keyword`，通过返回布尔值表示是否命中。
 
 cascader/filterable
 
@@ -122,7 +122,7 @@ cascader/filterable
 
 可以自定义备选项的节点内容
 
-:::demo 你可以通过 `scoped slot` 自定义节点的内容。 您可以访问 scope 中的 `node` 和 `data` 属性，分别表示当前节点的 Node 对象和当前节点的数据。
+:::demo 你可以通过 `scoped slot` 自定义节点的内容。您可以访问 scope 中的 `node` 和 `data` 属性，分别表示当前节点的 Node 对象和当前节点的数据。
 
 cascader/custom-content
 
@@ -130,7 +130,7 @@ cascader/custom-content
 
 ## 自定义建议项^(2.9.5)
 
-你可以通过 `suggestion-item` 插槽自定义建议项。 你可以在作用域中访问 `item`，它代表建议项。
+你可以通过 `suggestion-item` 插槽自定义建议项。你可以在作用域中访问 `item`，它代表建议项。
 
 :::demo
 
@@ -162,7 +162,7 @@ cascader/custom-tag
 
 控制在多选模式下已选值的显示方式。
 
-:::demo 在多选模式下，你可以使用 `show-checked-strategy` 来控制已选值的显示方式。 默认策略为 `child`，即显示所有已选中的子节点。 `parent` 策略仅在其所有子节点都被选中时显示父节点。
+:::demo 在多选模式下，你可以使用 `show-checked-strategy` 来控制已选值的显示方式。默认策略为 `child`，即显示所有已选中的子节点。 `parent` 策略仅在其所有子节点都被选中时显示父节点。
 
 cascader/show-checked-strategy
 
@@ -232,13 +232,13 @@ cascader/fit-input-width
 | clear-icon ^(2.11.0)                       | 自定义清除图标                                                                                                   | ^[string] / ^[object]`Component`                                                                                                                                                       | CircleClose  |
 | show-all-levels                            | 输入框中是否显示选中值的完整路径                                                                                          | ^[boolean]                                                                                                                                                                             | true         |
 | collapse-tags                              | 多选模式下是否折叠Tag                                                                                              | ^[boolean]                                                                                                                                                                             | —            |
-| collapse-tags-tooltip                      | 当鼠标悬停于折叠标签的文本时，是否显示所有选中的标签。 要使用此属性，`collapse-tags`属性必须设定为 true                                            | ^[boolean]                                                                                                                                                                             | false        |
+| collapse-tags-tooltip                      | 当鼠标悬停于折叠标签的文本时，是否显示所有选中的标签。要使用此属性，`collapse-tags`属性必须设定为 true                                             | ^[boolean]                                                                                                                                                                             | false        |
 | max-collapse-tags-tooltip-height ^(2.10.2) | collapse tags 的最大高度                                                                                       | ^[string] / ^[number]                                                                                                                                                                  | —            |
 | separator                                  | 用于分隔选项的字符                                                                                                 | ^[string]                                                                                                                                                                              | ' / '        |
 | filterable                                 | 该选项是否可以被搜索                                                                                                | ^[boolean]                                                                                                                                                                             | —            |
 | filter-method                              | 自定义搜索逻辑，第一个参数是`node`，第二个参数是`keyword`，返回的布尔值表示是否保留该选项                                                      | ^[Function]`(node: CascaderNode, keyword: string) => boolean`                                                                                                                       | —            |
 | debounce                                   | 搜索关键词正在输入时的去抖延迟，单位为毫秒                                                                                     | ^[number]                                                                                                                                                                              | 300          |
-| before-filter                              | 过滤函数调用前，所要调用的钩子函数，该函数接收要过滤的值作为参数。 如果该函数的返回值是 `false` 或者是一个被拒绝的 `Promise`，那么接下来的过滤逻辑便不会执行。                 | ^[Function]`(value: string) => boolean`                                                                                                                                             | —            |
+| before-filter                              | 过滤函数调用前，所要调用的钩子函数，该函数接收要过滤的值作为参数。如果该函数的返回值是 `false` 或者是一个被拒绝的 `Promise`，那么接下来的过滤逻辑便不会执行。                  | ^[Function]`(value: string) => boolean`                                                                                                                                             | —            |
 | popper-class                               | Cascader 下拉菜单和标签提示的自定义类名                                                                                  | ^[string]                                                                                                                                                                              | ''           |
 | popper-style                               | Cascader 下拉菜单和标签提示的自定义样式                                                                                  | ^[string] / ^[object]                                                                                                                                                                  | —            |
 | teleported                                 | 弹层是否使用 teleport                                                                                           | ^[boolean]                                                                                                                                                                             | true         |
@@ -246,14 +246,14 @@ cascader/fit-input-width
 | tag-type                                   | 标签类型                                                                                                      | ^[enum]`'success' \| 'info' \| 'warning' \| 'danger'`                                                                                                                               | info         |
 | tag-effect ^(2.7.8)                        | tag effect                                                                                                | ^[enum]`'light' \| 'dark' \| 'plain'`                                                                                                                                                | light        |
 | validate-event                             | 输入时是否触发表单的校验                                                                                              | ^[boolean]                                                                                                                                                                             | true         |
-| max-collapse-tags ^(2.3.10)                | 需要显示的 Tag 的最大数量 要使用此功能，`collapse-tags`的值必须为true                                                           | ^[number]                                                                                                                                                                              | 1            |
+| max-collapse-tags ^(2.3.10)                | 需要显示的 Tag 的最大数量要使用此功能，`collapse-tags`的值必须为true                                                            | ^[number]                                                                                                                                                                              | 1            |
 | empty-values ^(2.7.0)                      | 组件的空值配置， [参考config-provider](./config-provider.md#empty-values-configurations)                            | ^[array]                                                                                                                                                                               | —            |
 | value-on-clear ^(2.7.0)                    | 清空选项的值， [参考config-provider](./config-provider.md#empty-values-configurations)                             | ^[string] / ^[number] / ^[boolean] / ^[Function]                                                                                                                                       | —            |
 | persistent ^(2.7.8)                        | 当下拉框未被激活并且`persistent`设置为`false`，下拉框容器会被删除。                                                               | ^[boolean]                                                                                                                                                                             | true         |
 | fallback-placements ^(2.8.1)               | Tooltip 可用的 positions 请查看[popper.js 文档](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) | ^[array]`Placement[]`                                                                                                                                                                  | —            |
 | placement ^(2.8.1)                         | 下拉框出现的位置                                                                                                  | ^[enum]`'top' \| 'top-start' \| 'top-end' \| 'bottom' \| 'bottom-start' \| 'bottom-end' \| 'left' \| 'left-start' \| 'left-end' \| 'right' \| 'right-start' \| 'right-end'` | bottom-start |
-| popper-append-to-body ^(deprecated)        | 是否将弹出的内容直接插入到 body 元素。 在弹出内容的边框定位出现问题时，可将该属性设置为 false                                                     | ^[boolean]                                                                                                                                                                             | true         |
-| show-checked-strategy ^(2.10.5)            | 多选模式下已选节点的展示策略。 当你想让显示更简洁时，使用 `parent`。 当你想显示每个子项时，使用 `child`。                                            | ^[enum]`'parent' \| 'child'`                                                                                                                                                          | child        |
+| popper-append-to-body ^(deprecated)        | 是否将弹出的内容直接插入到 body 元素。在弹出内容的边框定位出现问题时，可将该属性设置为 false                                                      | ^[boolean]                                                                                                                                                                             | true         |
+| show-checked-strategy ^(2.10.5)            | 多选模式下已选节点的展示策略。当你想让显示更简洁时，使用 `parent`。当你想显示每个子项时，使用 `child`。                                              | ^[enum]`'parent' \| 'child'`                                                                                                                                                          | child        |
 | virtual-scroll ^(2.14.0)                   | 是否为大数据启用虚拟滚动                                                                                              | ^[boolean]                                                                                                                                                                             | false        |
 | fit-input-width ^(2.14.0)                  | 建议面板的宽度是否与输入框一致；如果值为 `number`，则宽度为固定值。                                                                    | ^[boolean] / ^[number]                                                                                                                                                                 | false        |
 | item-size ^(2.14.0)                        | 虚拟滚动的节点高度 (px)                                                                                            | ^[number]                                                                                                                                                                              | 34           |

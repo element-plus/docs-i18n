@@ -9,7 +9,7 @@ lang: zh-CN
 
 ## 基础用法
 
-:::demo 设置`layout`，表示需要显示的内容，用逗号分隔，布局元素会依次显示。 分页元素包括：`prev`（跳转到上一页的按钮）、`next`（跳转到下一页的按钮）、`pager`（页码列表）、`jumper`（跳转输入框）、`total`（总条目数）、`sizes`（用于设置每页条数的选择器）以及 `->`（该符号之后的所有元素将被靠右对齐）。
+:::demo 设置`layout`，表示需要显示的内容，用逗号分隔，布局元素会依次显示。分页元素包括：`prev`（跳转到上一页的按钮）、`next`（跳转到下一页的按钮）、`pager`（页码列表）、`jumper`（跳转输入框）、`total`（总条目数）、`sizes`（用于设置每页条数的选择器）以及 `->`（该符号之后的所有元素将被靠右对齐）。
 
 pagination/basic-usage
 
@@ -17,7 +17,7 @@ pagination/basic-usage
 
 ## 设置最大页码按钮数
 
-:::demo 默认情况下，当总页数超过 7 页时，Pagination 会折叠多余的页码按钮。 通过 `pager-count` 属性可以设置最大页码按钮数。
+:::demo 默认情况下，当总页数超过 7 页时，Pagination 会折叠多余的页码按钮。通过 `pager-count` 属性可以设置最大页码按钮数。
 
 pagination/number-of-pagers
 
@@ -35,7 +35,7 @@ pagination/background-color
 
 在空间有限的情况下，可以使用简单的小型分页。
 
-:::demo 通过`size`更改大小 这是个 `small`的例子
+:::demo 通过`size`更改大小这是个 `small`的例子
 
 pagination/small-pagination
 
@@ -55,7 +55,7 @@ pagination/auto-hide-pagination
 
 根据场景需要，可以添加其他功能模块。
 
-:::demo 此示例是一个完整的用例。 使用了 `size-change` 和 `current-change` 事件来处理页码大小和当前页变动时候触发的事件。 `page-sizes`接受一个整数类型的数组，数组元素为展示的选择每页显示个数的选项，`[100, 200, 300, 400]` 表示四个选项，每页显示 100 个，200 个，300 个或者 400 个。
+:::demo 此示例是一个完整的用例。使用了 `size-change` 和 `current-change` 事件来处理页码大小和当前页变动时候触发的事件。 `page-sizes`接受一个整数类型的数组，数组元素为展示的选择每页显示个数的选项，`[100, 200, 300, 400]` 表示四个选项，每页显示 100 个，200 个，300 个或者 400 个。
 
 pagination/more-elements
 
@@ -73,7 +73,7 @@ pagination/more-elements
 | default-page-size                   | 每页默认的条目个数，不设置时默认为10                                                                    | ^[number]                                                                            | —                                    |
 | total                               | 总条目数                                                                                   | ^[number]                                                                            | —                                    |
 | page-count                          | 总页数， `total` 和 `page-count` 设置任意一个就可以达到显示页码的功能；如果要支持 `page-sizes` 的更改，则需要使用 `total` 属性 | ^[number]                                                                            | —                                    |
-| pager-count                         | 设置最大页码按钮数。 页码按钮的数量，当总页数超过该值时会折叠                                                        | ^[number]`5 \| 7 \| 9 \| 11 \| 13 \| 15 \| 17 \| 19 \| 21`                   | 7                                    |
+| pager-count                         | 设置最大页码按钮数。页码按钮的数量，当总页数超过该值时会折叠                                                         | ^[number]`5 \| 7 \| 9 \| 11 \| 13 \| 15 \| 17 \| 19 \| 21`                   | 7                                    |
 | current-page / v-model:current-page | 当前页数                                                                                   | ^[number]                                                                            | —                                    |
 | default-current-page                | 当前页数的默认初始值，不设置时默认为 1                                                                   | ^[number]                                                                            | —                                    |
 | layout                              | 组件布局，子组件名用逗号分隔                                                                         | ^[string]`string (consists of sizes, prev, pager, next, jumper, ->, total, slot)` | prev, pager, next, jumper, ->, total |
@@ -118,6 +118,6 @@ pagination/more-elements
 
 ### 插槽
 
-| 名称      | 说明                                 |
-| ------- | ---------------------------------- |
-| default | 自定义内容 设置文案，需要在 `layout` 中列出 `slot` |
+| 名称      | 说明                                |
+| ------- | --------------------------------- |
+| default | 自定义内容设置文案，需要在 `layout` 中列出 `slot` |

@@ -29,7 +29,7 @@ splitter/vertical
 
 ## 可折叠
 
-配置 `collapsible` 可提供快速收缩功能。 你可以使用 `min` 属性来防止折叠后通过拖拽进行扩展。
+配置 `collapsible` 可提供快速收缩功能。你可以使用 `min` 属性来防止折叠后通过拖拽进行扩展。
 
 :::demo
 

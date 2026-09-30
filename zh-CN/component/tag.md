@@ -9,7 +9,7 @@ lang: zh-CN
 
 ## 基础用法
 
-:::demo 由 `type` 属性来选择 tag 的类型。 也可以通过 `color` 属性来自定义背景色。
+:::demo 由 `type` 属性来选择 tag 的类型。也可以通过 `color` 属性来自定义背景色。
 
 tag/basic
 
@@ -17,7 +17,7 @@ tag/basic
 
 ## 可移除标签
 
-:::demo 设置 `closable` 属性可以定义一个标签是否可移除。 它接受一个 `Boolean`。 默认的标签移除时会附带渐变动画。 如果不想使用，可以设置 `disable-transitions` 属性，它接受一个 `Boolean`，`true` 为关闭。 当 Tag 被移除时会触发 `close` 事件。
+:::demo 设置 `closable` 属性可以定义一个标签是否可移除。它接受一个 `Boolean`。默认的标签移除时会附带渐变动画。如果不想使用，可以设置 `disable-transitions` 属性，它接受一个 `Boolean`，`true` 为关闭。当 Tag 被移除时会触发 `close` 事件。
 
 tag/removable
 
@@ -65,7 +65,7 @@ tag/rounded
 
 ## 可选中的标签
 
-有时候因为业务需求，我们可能会需要用到类似复选框的标签，但是**按钮式的复选框**的样式又不满足需求，此时我们就可以用到 `check-tag`组件。 您可以在^(2.5.4)中使用 `type` 属性。
+有时候因为业务需求，我们可能会需要用到类似复选框的标签，但是**按钮式的复选框**的样式又不满足需求，此时我们就可以用到 `check-tag`组件。您可以在^(2.5.4)中使用 `type` 属性。
 
 :::demo check-tag 的基础使用方法，check-tag 提供的 API 非常简单。
 
