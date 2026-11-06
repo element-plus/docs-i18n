@@ -57,7 +57,7 @@ drawer/customization-header
 
 尝试拖动边缘部分。
 
-:::demo 设置`resizable`属性为`true`以做到拖拽
+:::demo Use a boolean to enable or disable resizing. The object form ^(2.14.8) allows more fine-grained control.
 
 drawer/resizable
 
@@ -101,33 +101,33 @@ Drawer 提供了一个名为 `destroy-on-close` 的 API，这是一个标志变�
 
 ### 属性
 
-| 属性名                        | 说明                                                                                      | 类型                                                                                                                                   | 默认值   |
-| -------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----- |
-| model-value / v-model      | 是否显示 Drawer                                                                             | ^[boolean]                                                                                                                           | false |
-| append-to-body             | Drawer 自身是否插入至 body 元素上。嵌套的 Drawer 必须指定该属性并赋值为 **true**                                 | ^[boolean]                                                                                                                           | false |
-| append-to ^(2.8.0)         | 挂载到哪个 DOM 元素将覆盖 `append-to-body`                                                        | ^[CSSSelector] / ^[HTMLElement]                                                                                                      | body  |
-| lock-scroll                | 是否在 Drawer 出现时将 body 滚动锁定                                                               | ^[boolean]                                                                                                                           | true  |
-| before-close               | 关闭前的回调，会暂停 Drawer 的关闭                                                                   | ^[Function]`(done: (cancel?: boolean) => void) => void(done 是个 function type 接受一个 boolean 参数, 执行 done 使用 true 参数或不提供参数将会终止关闭)` | —     |
-| close-on-click-modal       | 是否可以通过点击 modal 关闭 Drawer                                                                | ^[boolean]                                                                                                                           | true  |
-| close-on-press-escape      | 是否可以通过按下 ESC 关闭 Drawer                                                                  | ^[boolean]                                                                                                                           | true  |
-| open-delay                 | Drawer 打开的延时时间，单位毫秒                                                                     | ^[number]                                                                                                                            | 0     |
-| close-delay                | Drawer 关闭的延时时间，单位毫秒                                                                     | ^[number]                                                                                                                            | 0     |
-| destroy-on-close           | 控制是否在关闭 Drawer 之后将子元素全部销毁                                                               | ^[boolean]                                                                                                                           | false |
-| modal                      | 是否需要遮罩层                                                                                 | ^[boolean]                                                                                                                           | true  |
-| modal-penetrable ^(2.11.7) | 是否允许穿透遮罩层。 modal 属性必须为 `false`。                                                         | ^[boolean]                                                                                                                           | false |
-| direction                  | Drawer 打开的方向                                                                            | ^[enum]`'rtl' \| 'ltr' \| 'ttb' \| 'btt'`                                                                                         | rtl   |
-| resizable ^(2.11.0)        | 为抽屉启用可调整大小的功能                                                                           | ^[boolean]                                                                                                                           | false |
-| show-close                 | 是否显示关闭按钮                                                                                | ^[boolean]                                                                                                                           | true  |
-| size                       | Drawer 窗体的大小, 当使用 `number` 类型时, 以像素为单位, 当使用 `string` 类型时, 请传入 'x%', 否则便会以 `number` 类型解释 | ^[number] / ^[string]                                                                                                                | 30%   |
-| title                      | Drawer 的标题，也可通过具名 slot （见下表）传入                                                          | ^[string]                                                                                                                            | —     |
-| with-header                | 控制是否显示 header 栏, 默认为 true, 当此项为 false 时, title attribute 和 title slot 均不生效              | ^[boolean]                                                                                                                           | true  |
-| modal-class                | 遮罩层的自定义类名                                                                               | ^[string]                                                                                                                            | —     |
-| header-class ^(2.9.3)      | header 部分的自定义 class 名                                                                   | ^[string]                                                                                                                            | —     |
-| body-class ^(2.9.3)        | body 部分的自定义 class 名                                                                     | ^[string]                                                                                                                            | —     |
-| footer-class ^(2.9.3)      | footer 部分的自定义 class 名                                                                   | ^[string]                                                                                                                            | —     |
-| z-index                    | 设置 z-index                                                                              | ^[number]                                                                                                                            | —     |
-| header-aria-level ^(a11y)  | header 的 `aria-level` 属性                                                                | ^[string]                                                                                                                            | 2     |
-| custom-class ^(deprecated) | Drawer 的自定义类名                                                                           | ^[string]                                                                                                                            | —     |
+| 属性名                               | 说明                                                                                                | 类型                                                                                                                                   | 默认值   |
+| --------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----- |
+| model-value / v-model             | 是否显示 Drawer                                                                                       | ^[boolean]                                                                                                                           | false |
+| append-to-body                    | Drawer 自身是否插入至 body 元素上。嵌套的 Drawer 必须指定该属性并赋值为 **true**                                           | ^[boolean]                                                                                                                           | false |
+| append-to ^(2.8.0)                | 挂载到哪个 DOM 元素将覆盖 `append-to-body`                                                                  | ^[CSSSelector] / ^[HTMLElement]                                                                                                      | body  |
+| lock-scroll                       | 是否在 Drawer 出现时将 body 滚动锁定                                                                         | ^[boolean]                                                                                                                           | true  |
+| before-close                      | 关闭前的回调，会暂停 Drawer 的关闭                                                                             | ^[Function]`(done: (cancel?: boolean) => void) => void(done 是个 function type 接受一个 boolean 参数, 执行 done 使用 true 参数或不提供参数将会终止关闭)` | —     |
+| close-on-click-modal              | 是否可以通过点击 modal 关闭 Drawer                                                                          | ^[boolean]                                                                                                                           | true  |
+| close-on-press-escape             | 是否可以通过按下 ESC 关闭 Drawer                                                                            | ^[boolean]                                                                                                                           | true  |
+| open-delay                        | Drawer 打开的延时时间，单位毫秒                                                                               | ^[number]                                                                                                                            | 0     |
+| close-delay                       | Drawer 关闭的延时时间，单位毫秒                                                                               | ^[number]                                                                                                                            | 0     |
+| destroy-on-close                  | 控制是否在关闭 Drawer 之后将子元素全部销毁                                                                         | ^[boolean]                                                                                                                           | false |
+| modal                             | 是否需要遮罩层                                                                                           | ^[boolean]                                                                                                                           | true  |
+| modal-penetrable ^(2.11.7)        | 是否允许穿透遮罩层。 modal 属性必须为 `false`。                                                                   | ^[boolean]                                                                                                                           | false |
+| direction                         | Drawer 打开的方向                                                                                      | ^[enum]`'rtl' \| 'ltr' \| 'ttb' \| 'btt'`                                                                                         | rtl   |
+| [resizable](#resizable) ^(2.11.0) | whether to enable resizing for Drawer. The object form ^(2.14.8) allows more fine-grained control | ^[boolean] / ^[object]                                                                                                               | false |
+| show-close                        | 是否显示关闭按钮                                                                                          | ^[boolean]                                                                                                                           | true  |
+| size                              | Drawer 窗体的大小, 当使用 `number` 类型时, 以像素为单位, 当使用 `string` 类型时, 请传入 'x%', 否则便会以 `number` 类型解释           | ^[number] / ^[string]                                                                                                                | 30%   |
+| title                             | Drawer 的标题，也可通过具名 slot （见下表）传入                                                                    | ^[string]                                                                                                                            | —     |
+| with-header                       | 控制是否显示 header 栏, 默认为 true, 当此项为 false 时, title attribute 和 title slot 均不生效                        | ^[boolean]                                                                                                                           | true  |
+| modal-class                       | 遮罩层的自定义类名                                                                                         | ^[string]                                                                                                                            | —     |
+| header-class ^(2.9.3)             | header 部分的自定义 class 名                                                                             | ^[string]                                                                                                                            | —     |
+| body-class ^(2.9.3)               | body 部分的自定义 class 名                                                                               | ^[string]                                                                                                                            | —     |
+| footer-class ^(2.9.3)             | footer 部分的自定义 class 名                                                                             | ^[string]                                                                                                                            | —     |
+| z-index                           | 设置 z-index                                                                                        | ^[number]                                                                                                                            | —     |
+| header-aria-level ^(a11y)         | header 的 `aria-level` 属性                                                                          | ^[string]                                                                                                                            | 2     |
+| custom-class ^(deprecated)        | Drawer 的自定义类名                                                                                     | ^[string]                                                                                                                            | —     |
 
 :::warning
 
@@ -135,9 +135,18 @@ Drawer 提供了一个名为 `destroy-on-close` 的 API，这是一个标志变�
 
 :::
 
+### resizable ^(2.14.8)
+
+Configuration options for resizing the drawer.
+
+| Attribute | 说明                                                   | 类型                    | Default |
+| --------- | ---------------------------------------------------- | --------------------- | ------- |
+| min-size  | Minimum size of the drawer (in pixels or percentage) | ^[number] / ^[string] | 4px     |
+| max-size  | Maximum size of the drawer (in pixels or percentage) | ^[number] / ^[string] | 100%    |
+
 ### 事件
 
-| 事件名称                   | 说明                              | 类型                                                      |
+| 事件名称                   | 说明                              | Type                                                    |
 | ---------------------- | ------------------------------- | ------------------------------------------------------- |
 | open                   | Drawer 打开的回调                    | ^[Function]`() => void`                              |
 | opened                 | Drawer 打开动画结束时的回调               | ^[Function]`() => void`                              |
@@ -151,7 +160,7 @@ Drawer 提供了一个名为 `destroy-on-close` 的 API，这是一个标志变�
 
 ### 插槽
 
-| 名称                  | 说明                              |
+| 名称                  | 详情                              |
 | ------------------- | ------------------------------- |
 | default             | Drawer 的内容                      |
 | header              | Drawer 标题的内容；会替换标题部分，但不会移除关闭按钮。 |
@@ -166,6 +175,6 @@ Drawer 提供了一个名为 `destroy-on-close` 的 API，这是一个标志变�
 
 ### 暴露
 
-| 名称          | 详情                                       |
+| 名称          | 描述                                       |
 | ----------- | ---------------------------------------- |
 | handleClose | 用于关闭 Drawer, 该方法会调用传入的 `before-close` 方法 |

@@ -23,6 +23,14 @@ image/placeholder
 
 :::
 
+## Viewer Placeholder ^(2.14.8)
+
+:::demo Custom placeholder content when the preview image hasn't loaded yet by `slot = viewer-placeholder`.
+
+image/viewer-placeholder
+
+:::
+
 ## 加载失败
 
 :::demo 通过 `slot = error` and `slot = viewer-error`自定义图像加载错误时的内容。
@@ -93,7 +101,7 @@ image/custom-progress
 | scroll-container       | 开启懒加载功能后，监听 scroll 事件的容器默认情况下，开启懒加载功能后，监听 scroll 事件的容器                                                   | ^[string] / ^[object]`HTMLElement`                                           | —     |
 | alt                    | 原生属性 `alt`                                                                                               | ^[string]                                                                    | —     |
 | referrerpolicy         | 原生属性 [referrerPolicy](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy)。 | ^[string]                                                                    | —     |
-| crossorigin            | 原生属性 [crossorigin](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin)             | ^[enum]`'' \| 'anonymous' \| 'use-credentials'`                            | —     |
+| crossorigin            | 原生属性 [crossorigin](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin)             | ^[enum]`'' \| 'anonymous' \| 'use-credentials'`                            | sdf   |
 | preview-src-list       | 开启图片预览功能                                                                                                 | ^[array]`string[]`                                                           | []    |
 | z-index                | 设置图片预览的 z-index                                                                                          | ^[number]                                                                    | —     |
 | initial-index          | 初始预览图像索引，小于 `url-list` 的长度                                                                               | ^[number]                                                                    | 0     |
@@ -135,20 +143,254 @@ image/custom-progress
 
 ### Image Viewer Attributes
 
-| 事件名                    | 说明                                                    | Type                  | 默认值   |
-| ---------------------- | ----------------------------------------------------- | --------------------- | ----- |
-| url-list               | 用于预览的图片链接列表                                           | ^[array]`string[]`    | []    |
-| z-index                | 预览时遮罩层的 z-index                                       | ^[number] / ^[string] | —     |
-| initial-index          | 初始预览图像索引，小于 `url-list` 的长度                            | ^[number]             | 0     |
-| infinite               | 是否可以无限循环预览                                            | ^[boolean]            | true  |
-| hide-on-click-modal    | 是否可以通过点击遮罩层关闭预览                                       | ^[boolean]            | false |
-| teleported             | image 自身是否插入至 body 元素上。嵌套的父元素属性会发生修改时应该将此属性设置为 `true` | ^[boolean]            | false |
-| zoom-rate ^(2.2.27)    | 图像查看器缩放事件的缩放速率。                                       | ^[number]             | 1.2   |
-| scale ^(2.11.3)        | 预览图像缩放。                                               | ^[number]             | 1     |
-| min-scale ^(2.4.0)     | 图像查看器缩放事件的最小缩放比例                                      | ^[number]             | 0.2   |
-| max-scale ^(2.4.0)     | 图像查看器缩放事件的最大缩放比例                                      | ^[number]             | 7     |
-| close-on-press-escape  | 是否可以通过按下 ESC 关闭 Image Viewer                          | ^[boolean]            | true  |
-| show-progress ^(2.9.4) | 是否显示预览图片的进度条内容                                        | ^[boolean]            | false |
+<table spaces-before="0">
+  <tr>
+    <th>
+      事件名
+    </th>
+    
+    <th>
+      说明
+    </th>
+    
+    <th>
+      Type
+    </th>
+    
+    <th>
+      默认值
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      url-list
+    </td>
+    
+    <td>
+      用于预览的图片链接列表
+    </td>
+    
+    <td>
+      ^[array]<code>string[]</code>
+    </td>
+    
+    <td>
+      []
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      z-index
+    </td>
+    
+    <td>
+      预览时遮罩层的 z-index
+    </td>
+    
+    <td>
+      ^[number] / ^[string]
+    </td>
+    
+    <td>
+      —
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      initial-index
+    </td>
+    
+    <td>
+      初始预览图像索引，小于 <code>url-list</code> 的长度
+    </td>
+    
+    <td>
+      ^[number]
+    </td>
+    
+    <td>
+      0
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      infinite
+    </td>
+    
+    <td>
+      是否可以无限循环预览
+    </td>
+    
+    <td>
+      ^[boolean]
+    </td>
+    
+    <td>
+      true
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      hide-on-click-modal
+    </td>
+    
+    <td>
+      是否可以通过点击遮罩层关闭预览
+    </td>
+    
+    <td>
+      ^[boolean]
+    </td>
+    
+    <td>
+      false
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      teleported
+    </td>
+    
+    <td>
+      image 自身是否插入至 body 元素上。嵌套的父元素属性会发生修改时应该将此属性设置为 <code>true</code>
+    </td>
+    
+    <td>
+      ^[boolean]
+    </td>
+    
+    <td>
+      false
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      zoom-rate ^(2.2.27)
+    </td>
+    
+    <td>
+      图像查看器缩放事件的缩放速率。
+    </td>
+    
+    <td>
+      ^[number]
+    </td>
+    
+    <td>
+      1.2
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      scale ^(2.11.3)
+    </td>
+    
+    <td>
+      预览图像缩放。
+    </td>
+    
+    <td>
+      ^[number]
+    </td>
+    
+    <td>
+      1
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      min-scale ^(2.4.0)
+    </td>
+    
+    <td>
+      图像查看器缩放事件的最小缩放比例
+    </td>
+    
+    <td>
+      ^[number]
+    </td>
+    
+    <td>
+      0.2
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      max-scale ^(2.4.0)
+    </td>
+    
+    <td>
+      图像查看器缩放事件的最大缩放比例
+    </td>
+    
+    <td>
+      ^[number]
+    </td>
+    
+    <td>
+      7
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      close-on-press-escape
+    </td>
+    
+    <td>
+      是否可以通过按下 ESC 关闭 Image Viewer
+    </td>
+    
+    <td>
+      ^[boolean]
+    </td>
+    
+    <td>
+      true
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      show-progress ^(2.9.4)
+    </td>
+    
+    <td>
+      是否显示预览图片的进度条内容
+    </td>
+    
+    <td>
+      <div id="app">
+        <el-button>{{ message }}</el-button>
+      </div> <script>
+      const App = {
+        data() {
+          return {
+            message: "Hello Element Plus",
+          };
+        },
+      };
+      const app = Vue.createApp(App);
+      app.use(ElementPlus);
+      app.mount("#app");
+    </script>
+    </td>
+    
+    <td>
+      false
+    </td>
+  </tr>
+</table>
 
 ### Image Viewer Events
 
@@ -161,12 +403,13 @@ image/custom-progress
 
 ### Image Viewer Slots
 
-| 名称                     | 详情                                   | 类型                                                                                                                                                                                                                                 |
-| ---------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| default                | 自定义内容                                | -                                                                                                                                                                                                                                  |
-| progress ^(2.9.4)      | 自定义进度内容 (优先级高于 `show-progress` prop) | ^[object]`{ activeIndex: number, total: number }`                                                                                                                                                                                  |
-| toolbar ^(2.9.4)       | 自定义工具栏内容                             | ^[object]`{ actions: (action: ImageViewerAction, options?: ImageViewerActionOptions) => void, prev: () => void, next: () => void, reset: () => void, activeIndex: number, setActiveItem: (index: number) => void }` |
-| viewer-error ^(2.11.3) | 自定义图像加载失败的内容                         | ^[object]`{ activeIndex: number, src: string }`                                                                                                                                                                                    |
+| 名称                           | 详情                                                           | 类型                                                                                                                                                                                                                                 |
+| ---------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| default                      | 自定义内容                                                        | -                                                                                                                                                                                                                                  |
+| progress ^(2.9.4)            | 自定义进度内容 (优先级高于 `show-progress` prop)                         | ^[object]`{ activeIndex: number, total: number }`                                                                                                                                                                                  |
+| toolbar ^(2.9.4)             | 自定义工具栏内容                                                     | ^[object]`{ actions: (action: ImageViewerAction, options?: ImageViewerActionOptions) => void, prev: () => void, next: () => void, reset: () => void, activeIndex: number, setActiveItem: (index: number) => void }` |
+| viewer-placeholder ^(2.14.8) | custom placeholder content when the image hasn't loaded yet. | ^[object]`{ activeIndex: number, src: string }`                                                                                                                                                                                    |
+| viewer-error ^(2.11.3)       | 自定义图像加载失败的内容                                                 | ^[object]`{ activeIndex: number, src: string }`                                                                                                                                                                                    |
 
 ### Image Viewer Exposes
 

@@ -87,7 +87,7 @@ table/fixed-column-and-header
 
 ## 流体高度
 
-当数据量动态变化时，可以为 Table 设置一个最大高度。
+When the data is dynamically changed, you might want the table to have a maximum height rather than a fixed height and to show the scroll bar if needed.
 
 :::demo 通过设置 `max-height` 属性为 `el-table` 指定最大高度。此时若表格所需的高度大于最大高度，则会显示一个滚动条。
 

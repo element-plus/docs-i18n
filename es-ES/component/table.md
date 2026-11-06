@@ -87,7 +87,7 @@ table/fixed-column-and-header
 
 ## Tabla de altura fluida con cabecera fija (y columnas)
 
-Cuando los datos se cambian dinámicamente, tal vez desee que la tabla tenga una altura máxima en lugar de una altura fija y que muestre la barra de desplazamiento si es necesario.
+When the data is dynamically changed, you might want the table to have a maximum height rather than a fixed height and to show the scroll bar if needed.
 
 :::demo Al configurar el atributo `max-height` de `el-table`, puede fijar la cabecera de la tabla. La barra de desplazamiento únicamente se mostrará si la altura sobrepasa el valor de la altura máxima.
 
